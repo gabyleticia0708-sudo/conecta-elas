@@ -1,0 +1,66 @@
+Uma escola precisa manter cursos e matrículas sem repetir dados da aluna. Qual modelo atende?|Tabelas relacionadas por chaves|Um texto por curso com todos os nomes|Uma coluna por aluna|Um arquivo de imagem por matrícula
+Na tabela Aluna(id,nome), o registro (3,'Ana') representa o quê?|Uma linha com dois valores|Duas tabelas|Uma coluna|Uma chave composta obrigatória
+Qual tipo é adequado para preço com precisão decimal em bancos que o suportam?|DECIMAL(10,2)|BOOLEAN|DATE|CHAR(1)
+Qual propriedade uma chave primária precisa garantir?|Identificação única e não nula|Valores repetidos|Texto longo|Ordem alfabética
+Matricula.aluna_id referencia Aluna.id. Qual restrição protege a relação?|FOREIGN KEY|DEFAULT|ORDER BY|DISTINCT
+Qual restrição em Perfil.aluna_id ajuda a garantir um perfil por aluna?|UNIQUE|LIKE|DEFAULT|AVG
+Uma autora escreve muitos posts e cada post tem uma autora. Onde fica a chave estrangeira?|Na tabela Posts|Na tabela Autoras como lista de IDs|Em uma coluna por post em Autoras|Não é necessária chave
+Alunas participam de vários cursos e cursos têm várias alunas. Como representar?|Tabela Matricula com as duas chaves estrangeiras|Campo texto com IDs separados por vírgula|Duplicar a tabela Aluna|Uma coluna curso por semestre
+Qual mudança atende à 1FN?|Separar telefones múltiplos em registros próprios|Concatenar vários telefones numa célula|Duplicar nomes em cada coluna|Remover todas as chaves
+Em Matricula(aluna_id,curso_id,nome_aluna), por que mover nome_aluna para Aluna?|Depende só de parte da chave composta|É uma chave estrangeira obrigatória|Não pode existir texto em SQL|Evita usar SELECT
+Qual instrução cria tabela com id obrigatório e único?|CREATE TABLE A(id INTEGER PRIMARY KEY)|CREATE A(id INTEGER)|INSERT TABLE A(id)|SELECT id INTO A sem restrição
+Qual restrição impede nome ausente como NULL?|NOT NULL|UNIQUE|DEFAULT|CHECK(1=1)
+Qual restrição impede dois registros com mesmo email não nulo?|UNIQUE(email)|DEFAULT(email)|ORDER BY email|GROUP BY email
+Qual valor será usado se status omitido e definido DEFAULT 'ativo'?|'ativo'|NULL sempre|0|Erro sempre
+Qual CHECK restringe nota a 0 até 10 inclusive?|CHECK(nota BETWEEN 0 AND 10)|CHECK(nota > 10)|CHECK(nota != 0)|CHECK(nota IS NULL)
+Em SQLite, qual declaração permite atribuição automática de identificador inteiro quando omitido?|id INTEGER PRIMARY KEY|id TEXT UNIQUE|id REAL DEFAULT 0|id INTEGER NOT NULL sem chave
+Qual comando adiciona coluna telefone a Aluna?|ALTER TABLE Aluna ADD COLUMN telefone TEXT|UPDATE TABLE Aluna telefone TEXT|INSERT COLUMN telefone INTO Aluna|CREATE COLUMN telefone
+Qual comando remove estrutura e dados da tabela temporaria?|DROP TABLE temporaria|DELETE FROM temporaria|ALTER TABLE temporaria|SELECT * FROM temporaria
+Qual comando insere nome Ana?|INSERT INTO Aluna(nome) VALUES ('Ana')|UPDATE Aluna VALUES ('Ana')|SELECT INTO Aluna 'Ana'|ADD Aluna('Ana')
+Como alterar somente o nome da aluna id 4?|UPDATE Aluna SET nome='Bia' WHERE id=4|UPDATE Aluna SET nome='Bia'|INSERT INTO Aluna VALUES (4,'Bia')|DELETE FROM Aluna WHERE id=4
+Qual remove apenas a matrícula id 8?|DELETE FROM Matricula WHERE id=8|DROP TABLE Matricula|DELETE FROM Matricula|UPDATE Matricula SET id=8
+Qual consulta lê todos os campos de Curso?|SELECT * FROM Curso|SELECT Curso FROM *|READ Curso|GET Curso
+Qual consulta retorna somente nome e nota?|SELECT nome,nota FROM Aluna|SELECT * FROM Aluna|SELECT Aluna FROM nome,nota|SELECT nome AND nota FROM Aluna
+Qual sintaxe renomeia coluna no resultado?|SELECT nome AS aluna FROM Pessoa|SELECT nome TO aluna FROM Pessoa|ALTER nome AS aluna|SELECT nome = aluna FROM Pessoa
+Qual filtro retorna notas maiores ou iguais a 7?|WHERE nota >= 7|WHERE nota > 7|WHERE nota = 7|WHERE nota <= 7
+Como filtrar ativas com nota >=7?|WHERE ativa=1 AND nota>=7|WHERE ativa=1 OR nota>=7|WHERE NOT ativa=1 AND nota>=7|WHERE ativa=1,nota>=7
+Qual filtro aceita categoria HTML ou CSS?|WHERE categoria IN ('HTML','CSS')|WHERE categoria = ('HTML','CSS')|WHERE categoria AND 'CSS'|WHERE categoria NOT IN ('HTML','CSS')
+O filtro nota BETWEEN 5 AND 8 inclui quais limites?|5 e 8|Apenas 5|Apenas 8|Nenhum
+Qual padrão LIKE busca nomes que começam com Ana?|LIKE 'Ana%'|LIKE '%Ana'|LIKE '_Ana'|LIKE 'Ana'
+Como localizar notas ainda não registradas?|WHERE nota IS NULL|WHERE nota = NULL|WHERE nota = 0|WHERE nota LIKE 'NULL'
+Qual cláusula ordena nota da maior para menor?|ORDER BY nota DESC|ORDER BY nota ASC|GROUP BY nota|WHERE nota DESC
+Em SQLite, qual cláusula limita resultado a cinco registros?|LIMIT 5|TOP 5 no final|COUNT 5|WHERE 5
+Como listar categorias sem repetição?|SELECT DISTINCT categoria FROM Curso|SELECT categoria FROM Curso|SELECT COUNT(categoria) FROM Curso|SELECT categoria ORDER BY categoria
+Se três registros têm notas 7,NULL,8, qual resultado de COUNT(nota)?|2|3|15|NULL
+Qual resultado de SUM(valor) para 10,20,5?|35|3|11.67|20
+Qual resultado de AVG(nota) para 6,8,NULL?|7|4.67|14|3
+Qual par MIN e MAX para 4,9,2?|2 e 9|4 e 9|9 e 2|2 e 4
+Qual consulta conta matrículas por curso?|SELECT curso_id,COUNT(*) FROM Matricula GROUP BY curso_id|SELECT curso_id,COUNT(*) FROM Matricula sem GROUP BY|SELECT DISTINCT curso_id FROM Matricula|SELECT COUNT(*) FROM Matricula ORDER BY curso_id
+Como filtrar grupos com mais de 10 matrículas?|GROUP BY curso_id HAVING COUNT(*)>10|WHERE COUNT(*)>10 GROUP BY curso_id|GROUP BY curso_id LIMIT 10|ORDER BY COUNT(*)>10
+Qual função converte nome para maiúsculas?|UPPER(nome)|COUNT(nome)|SUM(nome)|LENGTH(nome)
+Qual formato ISO facilita ordenar datas armazenadas como texto?|YYYY-MM-DD|DD/MM/YYYY|MM/DD/YYYY|Nome do mês apenas
+Qual JOIN retorna apenas linhas com correspondência nos dois lados?|INNER JOIN|LEFT JOIN|FULL JOIN|CROSS JOIN
+Como listar todos os cursos inclusive sem matrículas?|Curso LEFT JOIN Matricula ON Curso.id=Matricula.curso_id|Curso INNER JOIN Matricula ON Curso.id=Matricula.curso_id|Curso CROSS JOIN Matricula|Matricula LEFT JOIN Curso ON Curso.id=Matricula.curso_id
+A RIGHT JOIN B preserva quais linhas?|Todas de B|Todas de A apenas|Somente as iguais|Nenhuma sem correspondência
+FULL OUTER JOIN preserva quais linhas?|Todas de ambas as tabelas|Apenas correspondências|Somente da esquerda|Somente da direita
+Para ligar Funcionaria.supervisora_id a Funcionaria.id, o que usar?|SELF JOIN com aliases distintos|DROP TABLE|UNION sem condição|GROUP BY sem JOIN
+Para recuperar nome da aluna e título do curso a partir de Matricula, o que fazer?|JOIN com Aluna e Curso usando respectivas chaves|JOIN somente com Aluna|UNION de nomes e títulos|COUNT(*)
+Qual consulta seleciona notas acima da média?|SELECT * FROM Aluna WHERE nota > (SELECT AVG(nota) FROM Aluna)|SELECT * FROM Aluna WHERE nota > AVG(nota)|SELECT AVG(nota) FROM Aluna|SELECT * FROM Aluna HAVING nota > 0
+Qual operador verifica existência de matrícula correspondente sem precisar contar todas?|EXISTS|SUM|DISTINCT|ORDER BY
+Qual operação combina resultados compatíveis eliminando duplicatas?|UNION|UNION ALL|INNER JOIN|GROUP BY sozinho
+Qual expressão classifica nota em aprovado ou revisão?|CASE WHEN nota>=7 THEN 'aprovado' ELSE 'revisão' END|IF nota>=7 AS 'aprovado'|WHERE nota>=7 THEN 'aprovado'|CASE nota END
+Qual estrutura pode acelerar buscas frequentes por email?|Índice em email|Uma coluna duplicada sem índice|ORDER BY em todo INSERT|DROP TABLE
+Quando um índice adicional pode prejudicar desempenho?|Em tabela com muitas escritas por custo de manutenção|Em SELECT sempre|Quando não existem dados nunca|Quando a chave já é única apenas
+Qual comando examina o plano em SQLite?|EXPLAIN QUERY PLAN SELECT * FROM Curso WHERE id=1|SHOW TABLE Curso|DROP INDEX|SELECT COUNT(*)
+Qual estratégia mantém débito e crédito de uma transferência juntos?|Executar ambos em uma transação|Confirmar cada um isoladamente|Usar duas conexões sem controle|Ignorar falhas
+Se a segunda operação de uma transação falhar, qual comando desfaz alterações não confirmadas?|ROLLBACK|COMMIT|SELECT|CREATE
+Qual propriedade ACID garante que todas as operações da transação ocorram ou nenhuma?|Atomicidade|Isolamento|Durabilidade|Consistência apenas
+Qual objeto guarda uma consulta nomeada reutilizável?|VIEW|TRIGGER exclusivamente|INDEX|FOREIGN KEY
+Qual recurso reage automaticamente a INSERT, UPDATE ou DELETE conforme definição?|TRIGGER|VIEW|ORDER BY|ALIAS
+Como tratar entrada do usuário em consulta por email?|Parâmetros vinculados, sem concatenação SQL|Concatenar diretamente|Escapar HTML apenas|Remover espaços somente
+Em sqlite3 Python, qual chamada usa parâmetro corretamente?|c.execute('SELECT * FROM A WHERE id=?',(id,))|c.execute('SELECT * FROM A WHERE id='+id)|c.execute('SELECT * FROM A WHERE id=?')|c.execute('SELECT * FROM A WHERE id={id}')
+Qual estrutura registra várias cópias físicas de um mesmo livro?|Livro e Exemplar relacionados|Uma coluna por cópia em Livro|Uma lista de códigos em um texto|Somente tabela de autores
+Qual estrutura preserva preço de venda mesmo após preço do produto mudar?|ItemPedido com preço unitário registrado na venda|Consultar apenas preço atual de Produto|Guardar somente total do estoque|Apagar histórico após mudança
+Para relatório de faturamento por categoria, qual combinação é adequada?|JOIN de itens e produtos, GROUP BY categoria e SUM do valor|DISTINCT apenas|ORDER BY categoria sem soma|DROP TABLE de itens
+Qual sequência representa CRUD?|INSERT, SELECT, UPDATE, DELETE|CREATE, DROP, ALTER, TRUNCATE apenas|SELECT, SELECT, SELECT, SELECT|JOIN, UNION, ORDER BY, LIMIT
+Qual teste verifica integridade de um projeto de banco?|Tentar matrícula com curso inexistente e confirmar rejeição da FK ativa|Apenas abrir o arquivo|Inserir somente registros válidos|Remover constraints antes do teste

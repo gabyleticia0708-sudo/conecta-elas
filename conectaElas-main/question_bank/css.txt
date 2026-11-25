@@ -1,0 +1,52 @@
+Qual regra altera apenas a cor do texto de elementos com classe aviso?|.aviso { color: red; }|#aviso { color: red; }|aviso { background: red; }|.aviso { font-color: red; }
+Várias páginas precisam compartilhar o mesmo estilo. Qual forma é mais sustentável?|Link para um arquivo CSS externo compartilhado|Copiar style inline em cada elemento|Duplicar todo o CSS em cada HTML|Aplicar estilos por atributos HTML obsoletos
+Qual seletor corresponde a qualquer elemento com class="card destaque" que tenha a classe card?|.card|#card|card|[class="card"]
+Qual seletor corresponde somente a p filhos diretos de .card?|.card > p|.card p|.card + p|p > .card
+Qual pseudo-classe representa um elemento com foco visível indicado pelo navegador?|:focus-visible|::focus|:hover apenas|::before
+Qual pseudo-elemento insere decoração antes do conteúdo de um elemento?|::before|:first-child|:focus|::selection
+Duas regras de mesma origem, importância e especificidade definem color. Qual prevalece?|A que aparece por último na ordem de cascata|A primeira sempre|A de menor valor hexadecimal|A mais curta
+Qual seletor tem maior especificidade para o mesmo elemento?|#menu .item|.menu .item|nav .item|.item
+Qual propriedade normalmente é herdada do pai?|color|margin|border|width
+Com fonte raiz de 16px, quanto mede 1.5rem?|24px|16px|1.5px|32px
+Qual rgba produz preto com 50% de opacidade?|rgba(0,0,0,0.5)|rgba(0,0,0,50)|rgb(128,128,128)|rgba(255,255,255,0.5)
+Um texto está difícil de ler por linhas muito juntas. Qual propriedade ajusta a altura das linhas?|line-height|letter-spacing|font-weight|text-indent
+Ao carregar fonte externa, qual font-display evita texto invisível por longo período?|swap|none|hidden|block obrigatório
+Com content-box, width:200px, padding:10px e border:2px de cada lado, qual largura externa?|224px|200px|212px|220px
+Qual propriedade cria espaço fora da borda do elemento?|margin|padding|gap dentro do próprio elemento|outline
+Qual propriedade cria espaço entre conteúdo e borda?|padding|margin|outline-offset|border-radius
+Qual declaração cria borda sólida roxa de 2px?|border:2px solid purple|border:solid 2 purple|outline-color:2px purple|border-style:2px
+Como limitar um card a 600px, sem ultrapassar largura disponível?|width:100%; max-width:600px|width:600px; min-width:600px|width:100vw; min-width:600px|max-width:none; width:600px
+Um bloco de altura fixa precisa mostrar barra de rolagem somente quando necessário. Qual overflow?|auto|hidden|visible|scroll sempre
+Qual propriedade define como imagem de fundo preenche o bloco preservando proporção e cobrindo área?|background-size:cover|background-size:100% 100%|background-repeat:repeat|background-position:cover
+Qual declaração adiciona sombra externa deslocada verticalmente?|box-shadow:0 4px 12px #0003|text-shadow:0 4px 12px #0003|border-shadow:4px|filter:opacity(0.3)
+Qual display faz elemento gerar caixa flexível para seus filhos?|flex|block|inline|contents
+Um elemento absolute precisa ser posicionado relativamente a um card. Qual position no card?|relative|static|inherit de um ancestral static|absolute somente no filho
+Um modal deve aparecer sobre elementos do mesmo contexto de empilhamento. Qual propriedade controla ordem de sobreposição?|z-index|order|opacity sempre|font-weight
+Qual regra flex distribui três cartões em linha por padrão?|display:flex|display:block|display:inline|position:relative
+Com flex-direction:column, qual é o eixo principal?|Vertical|Horizontal|Diagonal|Depende de justify-items
+Em flex-direction:row, qual propriedade centraliza os itens no eixo horizontal?|justify-content:center|align-items:center|vertical-align:middle|text-align:center no container flex
+Em flex-direction:row, qual propriedade centraliza itens verticalmente?|align-items:center|justify-content:center|justify-items:center|float:center
+Dois itens com basis:0 e flex-grow 1 e 2 dividem 300px livres. Qual largura do segundo?|200px|150px|100px|300px
+Como permitir que cartões flex quebrem para próxima linha?|flex-wrap:wrap|overflow:hidden|flex-shrink:0 sozinho|white-space:nowrap
+Qual display permite definir linhas e colunas de layout em duas dimensões?|grid|flex obrigatório em todos os casos|inline-block apenas|contents
+Qual regra cria três colunas de mesma fração no grid?|grid-template-columns:repeat(3,1fr)|grid-template-rows:repeat(3,1fr)|grid-columns:3|grid-template-columns:3fr
+Qual propriedade define espaçamento entre linhas e colunas de grid sem margens individuais?|gap|padding|border-spacing em qualquer grid|line-height
+Uma área nomeada main foi declarada em grid-template-areas. Como associar um filho a ela?|grid-area:main|grid-template:main|grid-column-name:main|grid-name:main
+Qual expressão cria colunas automáticas com mínimo 180px e expansão de espaço?|repeat(auto-fit,minmax(180px,1fr))|repeat(180px,auto-fit)|minmax(1fr,180px)|repeat(1fr,180px)
+Qual media query aplica estilo quando viewport tem pelo menos 768px?|@media (min-width:768px)|@media (max-width:768px)|@media screen-width=768|@media (width<0px)
+Qual estratégia representa mobile first?|CSS base para telas pequenas e min-width para ampliar layouts|CSS base desktop e apenas esconder conteúdo no celular|Fixar largura 1200px|Usar zoom para caber desktop no celular
+Um menu quebra a 720px, independentemente do modelo do aparelho. Como escolher breakpoint?|Basear-se no ponto em que o conteúdo deixa de caber|Usar somente nomes de celulares|Aplicar a mesma largura fixa em todos|Escolher breakpoint aleatório por resolução de imagem
+Qual CSS evita que imagens ultrapassem container e preserva proporção?|max-width:100%; height:auto|width:100%; height:100% sempre|min-width:1000px|object-fit:fill com altura fixa
+Qual resultado de clamp(16px, 4vw, 24px) numa viewport de 1000px?|24px|40px|16px|4px
+Um card precisa mudar layout conforme largura do seu contêiner, não da viewport. Qual recurso?|Container queries com container-type|Media query baseada exclusivamente no dispositivo|z-index|@keyframes
+Qual regra suaviza alteração de background por 200ms?|transition:background-color 200ms|animation:background-color|transform:200ms|transition-duration:0
+Qual transform desloca 20px horizontalmente sem alterar o fluxo normal?|translateX(20px)|rotate(20px)|scaleX(20px)|position:20px
+Como declarar etapas de uma animação CSS?|@keyframes nome { from {...} to {...} }|@animation nome { ... }|@transition nome { ... }|@media animation {...}
+Qual declaração define uma custom property reutilizável?|--cor-principal:purple|$cor-principal:purple em CSS puro|var(cor):purple|color-variable:purple
+Qual expressão ocupa toda largura menos 32px?|calc(100% - 32px)|calc(100% + 32px)|100%-32px|calc(32px - 100%)
+Como usar token de cor com fallback em CSS?|color:var(--texto,#222)|color:--texto ou #222|color:var(texto,#222)|color:calc(--texto,#222)
+Qual media query detecta preferência do sistema por tema escuro?|@media (prefers-color-scheme:dark)|@media (dark-mode:true)|@media (color:dark)|@media (theme:night)
+Em BEM, qual classe representa elemento titulo do bloco card?|card__titulo|card--titulo sempre modificador|card-titulo--|titulo__card
+Um projeto tem estilos repetidos em vários arquivos. Qual organização facilita manutenção?|Tokens, base, componentes e páginas com regras compartilhadas|Copiar arquivo inteiro para cada página|Misturar CSS e JS em cada atributo|Aumentar todos os seletores com !important
+Uma animação não é essencial e usuária prefere menos movimento. Qual regra respeita isso?|@media (prefers-reduced-motion:reduce) para reduzir ou desativar animação|Desativar navegação por teclado|Reduzir contraste do texto|Forçar animações mais rápidas
+Um dashboard deve ter sidebar em telas largas e coluna única no celular. Qual solução?|Grid responsivo com breakpoint orientado pelo conteúdo|Posições absolutas fixas em pixels|Uma única tabela de largura 1400px|Esconder conteúdo principal em telas pequenas

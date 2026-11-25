@@ -1,0 +1,43 @@
+Qual vantagem de commits pequenos e relacionados?|Permitem revisar e localizar regressões com clareza|Eliminam necessidade de teste|Impedem conflitos sempre|Substituem backup de arquivos não rastreados
+Qual comando verifica a versão instalada?|git --version|git version install|git init --version only|git status version
+Como configurar nome para commits deste repositório apenas?|git config user.name "Ana"|git config --global user.name "Ana"|git remote add Ana|git commit --name Ana
+Qual comando inicializa um repositório na pasta atual?|git init|git clone sem URL|git status|git push
+Qual comando mostra arquivos alterados e preparados?|git status|git log|git remote|git tag
+Depois de editar um arquivo e antes de git add, onde está a alteração?|Working tree|Commit anterior|Repositório remoto|Tag publicada
+Qual comando prepara apenas app.py para commit?|git add app.py|git commit app.py sem conteúdo preparado sempre|git push app.py|git init app.py
+Qual comando registra conteúdo preparado com mensagem?|git commit -m "Corrige formulário"|git add -m "Corrige formulário"|git push -m "Corrige formulário"|git status -m "Corrige formulário"
+Qual mensagem descreve melhor uma mudança?|Valida email antes de cadastrar|mudanças|final final|aaa
+Qual comando mostra histórico resumido de commits?|git log --oneline|git diff --cached|git status --short|git init
+Qual comando compara alterações ainda não preparadas?|git diff|git log|git remote -v|git tag
+Para evitar incluir .env ainda não rastreado, o que fazer?|Adicionar .env ao .gitignore antes de preparar|Criar tag .env|Renomear para .py|Fazer commit e depois ignorar, assumindo remoção do histórico
+Qual comando restaura arquivo rastreado não preparado a partir do índice, descartando edição local?|git restore app.py|git revert app.py|git log app.py|git push app.py
+Qual comando retira arquivo do staging preservando edição no working tree?|git reset HEAD -- app.py|git reset --hard|git clean -fd|git commit --amend
+Qual comando cria novo commit que desfaz outro, sem reescrever histórico?|git revert HASH|git reset --hard HASH|git rebase HASH|git stash
+Qual comando registra remoção de arquivo rastreado no staging?|git rm arquivo.txt|git ignore arquivo.txt|git tag arquivo.txt|git remote rm arquivo.txt
+Qual comando move arquivo rastreado e prepara mudança?|git mv antigo.txt novo.txt|git copy antigo.txt novo.txt|git branch antigo.txt novo.txt|git stash novo.txt
+Quando é razoável usar commit --amend?|Para ajustar último commit local ainda não compartilhado|Para editar qualquer commit remoto sem coordenação|Para baixar dependências|Para criar novo remoto
+Qual comando reaplica stash mantendo a entrada guardada?|git stash apply|git stash pop sempre mantém|git stash clear|git stash drop
+Qual comando cria branch revisão sem trocar para ela?|git branch revisao|git switch revisao sempre cria|git tag revisao|git remote add revisao
+Qual comando cria e troca para branch nova?|git switch -c revisao|git switch --detach revisao|git branch -d revisao|git merge revisao
+Qual comando legado troca para branch existente?|git checkout revisao|git checkout -b revisao se já existe|git checkout -- revisao sempre é branch|git init revisao
+Estando na branch main, qual comando integra commits de feature?|git merge feature|git switch feature apenas|git remote add feature|git fetch feature sem integração
+Quando surge conflito de merge?|Quando mudanças incompatíveis precisam de decisão manual|Sempre que há dois commits|Quando o repo é vazio|Ao executar git status
+Após resolver marcadores de conflito, o que fazer?|Testar, git add nos arquivos resolvidos e concluir merge|Apagar .git|Forçar push sem revisar|Ignorar marcadores
+Qual efeito típico de rebase em commits locais?|Reaplica commits sobre outra base, alterando seus identificadores|Cria somente tag|Apaga todos os arquivos|Só baixa repositório
+Qual comando aplica mudança de um commit específico na branch atual?|git cherry-pick HASH|git checkout HASH apenas|git log HASH|git remote HASH
+O que é origin normalmente?|Nome de um repositório remoto|Nome obrigatório da branch|Um commit especial|Arquivo de configuração CSS
+Qual comando lista remotos com URLs?|git remote -v|git branch -v|git log --oneline|git status
+Qual comando cria cópia local de repositório remoto?|git clone URL|git init URL|git pull URL em pasta sem repo sempre|git fork URL
+Qual comando envia commits da branch atual ao remoto origin, configurando upstream?|git push -u origin feature|git pull -u origin feature|git add origin feature|git fetch -u origin feature
+Qual operação git pull normalmente realiza?|Fetch seguido de integração configurada|Somente push|Somente status|Remove arquivos ignorados
+Qual comando atualiza referências remotas sem integrar automaticamente à branch atual?|git fetch|git pull sempre sem integração|git merge|git commit
+Qual é a finalidade de um fork no GitHub?|Criar cópia vinculada na conta para contribuir|Apagar projeto original|Executar testes localmente|Criar senha do Git
+Qual é a finalidade de pull request?|Propor revisão e integração de mudanças|Baixar bibliotecas|Criar chave privada|Apagar issues
+Em code review, qual comentário é mais útil?|Indicar risco reproduzível e sugerir melhoria testável|Dizer apenas ruim|Aprovar sem ler|Comentar aparência da pessoa
+Qual informação torna um relato de bug útil?|Passos, resultado esperado, resultado observado e ambiente|Somente nome do projeto|Somente cor do site|Senha da conta
+Qual conteúdo deve entrar em README de projeto Flask?|Instalação, configuração sem segredos, execução e testes|Chave privada real|Somente logo|Apenas histórico de nomes
+Por que consultar licença antes de reutilizar código?|Para conhecer permissões e obrigações de distribuição|Porque todos os projetos públicos têm uso irrestrito|Para aumentar velocidade do programa|Para dispensar atribuição sempre
+Qual comando marca commit atual com tag anotada v1.0?|git tag -a v1.0 -m "Versão 1.0"|git branch -a v1.0|git commit --tag v1.0|git release v1.0
+Qual distinção entre tag e release no GitHub?|Release pode associar notas e arquivos a uma tag|Tag é obrigatoriamente arquivo ZIP|Release apaga histórico|São comandos idênticos
+Qual uso típico de GitHub Actions?|Executar testes automatizados em push ou pull request|Substituir banco de dados|Guardar senhas no código|Editar arquivos locais sem configuração
+Qual fluxo reduz risco em trabalho de equipe?|Branch própria, commits revisáveis, testes e pull request|Push direto sem testes para toda mudança|Compartilhar uma senha|Apagar histórico após cada tarefa

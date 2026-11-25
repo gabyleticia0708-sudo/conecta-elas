@@ -1,0 +1,3 @@
+Qual restrição garante email obrigatório e único?|email TEXT NOT NULL UNIQUE|email TEXT DEFAULT ''|email TEXT NULL|email TEXT CHECK(1=1)
+Qual JOIN preserva cursos que não possuem matrícula?|Curso LEFT JOIN Matricula ON Curso.id=Matricula.curso_id|Curso INNER JOIN Matricula ON Curso.id=Matricula.curso_id|Curso CROSS JOIN Matricula|Matricula LEFT JOIN Curso ON Curso.id=Matricula.curso_id
+Qual comando encerra uma transação descartando alterações não confirmadas?|ROLLBACK|COMMIT|SELECT|VACUUM

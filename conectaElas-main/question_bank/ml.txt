@@ -1,0 +1,3 @@
+Para prever duração de estudo, qual variável pode ser alvo supervisionado?|Minutos efetivamente gastos|ID aleatório da aluna|Nome completo|Senha
+Por que separar dados de teste antes de treinar?|Medir generalização em exemplos não usados no ajuste|Aumentar artificialmente nota de treino|Duplicar dados em ambos|Eliminar necessidade de avaliação
+Para classes com forte desbalanceamento, qual análise é útil além da acurácia?|Precisão, recall e matriz de confusão|Somente número de linhas|Cor do gráfico|Tempo de instalação

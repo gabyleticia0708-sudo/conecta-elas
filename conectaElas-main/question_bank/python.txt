@@ -1,0 +1,103 @@
+Um arquivo main.py contém print(2 + 3). Qual comando executa o script no ambiente Python ativo?|python main.py|pip main.py|python -m pip main.py|import main.py no terminal
+Em Python, `if True:\nprint('ok')` produz qual problema?|IndentationError por ausência de bloco indentado|NameError porque True não existe|TypeError porque print não aceita texto|Nenhum erro, a indentação é opcional
+Qual trecho documenta a finalidade de uma função de modo acessível por help()?|Uma docstring imediatamente após def, dentro do bloco|Um comentário após a chamada da função|Uma variável chamada comentario fora da função|Um print no final do programa
+Após `a = 5; b = a; a = 8`, qual valor de b?|5|8|13|None
+Qual expressão tem tipo float em Python 3?|5 / 2|5 // 2|5 % 2|int('5')
+Qual saída de `print(f'{3.456:.2f}')`?|3.46|3.45|3.456|3.4
+Se input() devolve '12', qual expressão calcula o inteiro 14?|int(valor) + 2|valor + '2'|float(valor) * 2|valor + 2
+Qual o resultado de `17 // 5 + 17 % 5`?|5|3|4|8
+Qual comparação é verdadeira em Python?|3 < 4 <= 4|3 > 4 <= 4|3 == 4 < 5|3 < 4 < 4
+Com a=True e b=False, qual valor de `not a or b`?|False|True|None|Erro de sintaxe
+Com x=7, `if x >= 5: r='A'` seguido de `elif x >= 7: r='B'` atribui qual valor?|A|B|A e B|Nenhum
+Em `match status`, qual padrão funciona como caso padrão?|case _:|case default:|else:|case any():
+Qual valor de s após `s=0;` e um for que soma 2, 4 e 6?|12|6|24|3
+Um while deve parar quando n chega a 0. Qual atualização garante avanço se n começa positivo?|n -= 1|n += 1|n = n|n *= 2
+Qual lista resulta de `list(range(2, 9, 3))`?|[2, 5, 8]|[2, 5, 8, 9]|[2, 3, 4, 5, 6, 7, 8]|[3, 6, 9]
+Dentro de um for, qual instrução pula apenas a iteração atual?|continue|break|pass|return
+Um for externo tem 2 valores e o interno 3. Quantas vezes print executa no corpo interno?|6|5|3|2
+Com idade=17, qual resultado de `'adulto' if idade >= 18 else 'menor'`?|menor|adulto|True|17
+Qual resultado de `'Python'[-2]`?|o|n|h|P
+Qual resultado de `'abcdef'[1:5:2]`?|bd|bdf|ace|bcde
+Qual resultado de `'  Ana  '.strip().lower()`?|ana|Ana|  ana  |ANA
+Qual f-string exibe preço 12.5 como `R$ 12.50`?|f'R$ {preco:.2f}'|f'R$ {preco:2d}'|f'R$ preco:.2f'|f'R$ {preco:.0f}'
+Qual resultado de `'banana'.replace('a','o',1)`?|bonana|bonono|banona|banana
+Qual resultado de `'-'.join('a b c'.split())`?|a-b-c|a b c|abc|['a', 'b', 'c']
+Ao gravar texto com acentos, qual parâmetro explicita a codificação?|encoding='utf-8'|mode='ascii'|newline='utf-8'|errors='utf-8'
+Após `a=[1,2]; b=a; b.append(3)`, qual conteúdo de a?|[1, 2, 3]|[1, 2]|[3]|[1, 2, [3]]
+Qual diferença entre `append([3,4])` e `extend([3,4])` em [1,2]?|append acrescenta uma lista; extend acrescenta seus itens|Ambos acrescentam os itens separadamente|extend cria uma lista aninhada; append não|Ambos retornam uma nova lista sem alterar a original
+Qual resultado de `[n*n for n in range(5) if n%2==0]`?|[0, 4, 16]|[0, 2, 4]|[1, 9]|[0, 1, 4, 9, 16]
+Qual expressão cria uma tupla de um elemento?| (5,)| (5)| [5]| {5}
+Qual valor de resto em `a, *resto = [1,2,3]`?|[2, 3]|[1, 2, 3]|(2, 3)|3
+Qual resultado de `{1,2,3} & {2,3,4}`?|{2, 3}|{1, 4}|{1, 2, 3, 4}|{1, 2}
+Em `d={'a':2}`, qual expressão retorna 0 quando a chave b não existe?|d.get('b', 0)|d['b']|d.get('b')|d.pop('b')
+Após `d={'x':1}; d.update({'x':2,'y':3})`, qual valor de d['x']?|2|1|3|[1, 2]
+Qual resultado de `{n:n**2 for n in [2,3]}`?|{2: 4, 3: 9}|{4: 2, 9: 3}|[4, 9]|{2, 3, 4, 9}
+Dado `dados={'alunas':[{'nome':'Ana'}]}`, qual acesso retorna Ana?|dados['alunas'][0]['nome']|dados['alunas']['nome'][0]|dados[0]['alunas']['nome']|dados['nome'][0]
+Qual declaração define uma função chamada dobro com um parâmetro?|def dobro(n):|function dobro(n):|def dobro = (n):|dobro(n) =>
+Se `def soma(a,b): return a+b`, qual chamada é válida?|soma(2, 3)|soma(2)|soma(2,3,4)|soma(a=2, 3)
+Uma função executa print(8) e não usa return. O que sua chamada retorna?|None|8|True|'8'
+Para `def f(a,b): return a-b`, qual valor de `f(b=2,a=7)`?|5|-5|9|Erro por ordem dos argumentos
+Qual risco de definir `def f(itens=[]): itens.append(1); return itens`?|A lista padrão é compartilhada entre chamadas sem argumento|Uma lista vazia é criada em cada chamada|A função não pode receber listas|append devolve outra lista e não altera itens
+Em `def f(*args, **kwargs)`, como ficam `f(1,2,x=3)`?|args=(1,2), kwargs={'x':3}|args=[1,2,3], kwargs={}|args={'x':3}, kwargs=(1,2)|args=(1,2,3), kwargs=None
+Se x=10 global e `def f(): x=2; return x`, qual valor global depois de f()?|10|2|12|None
+Qual resultado de `sorted([('a',3),('b',1)], key=lambda item:item[1])`?|[('b',1), ('a',3)]|[('a',3), ('b',1)]|[1,3]|['b','a']
+Se `def dobro(x): return 2*x` e g=dobro, qual resultado de g(4)?|8|4|dobro|TypeError
+Uma função recursiva calcula f(n)=n*f(n-1). Qual caso base adequado para fatorial?|Retornar 1 quando n == 0|Retornar 0 quando n == 0|Chamar f(n) quando n == 0|Retornar n+1 para qualquer n
+Após `import math`, qual chamada calcula raiz quadrada de 9?|math.sqrt(9)|sqrt(9) sem importar sqrt|math.root(9)|import.sqrt(9)
+Um arquivo util.py contém def somar. Qual importação permite chamar util.somar(2,3)?|import util|import somar from util|include util.py|from util import somar, chamando util.somar sem importar util
+Qual arquivo tradicional marca um diretório como pacote Python regular?|__init__.py|requirements.txt|main.html|setup.sql
+Qual comando instala requests no interpretador Python selecionado?|python -m pip install requests|python requests install|pip run requests|python -m requests install
+Qual comando cria um ambiente virtual chamado .venv?|python -m venv .venv|pip install .venv|python .venv create|venv -m python
+Qual linha fixa requests na versão 2.32.3 em requirements.txt?|requests==2.32.3|requests=2.32.3|requests>=2.32.3|import requests 2.32.3
+Qual condição impede a execução de um bloco ao importar o módulo?|if __name__ == '__main__':|if __name__ == '__init__':|if import == False:|if __file__ == 'python':
+Qual modo de open permite ler um arquivo de texto sem alterá-lo?|r|w|a|x
+Qual modo adiciona texto ao fim de um arquivo sem apagar o conteúdo?|a|w|r|x
+Qual benefício de `with open(...) as f`?|Fecha o arquivo ao sair do bloco, inclusive em caso de exceção|Mantém o arquivo aberto para todo o programa|Impede qualquer erro de leitura|Converte automaticamente o texto em JSON
+Qual construção pathlib junta diretório e arquivo de modo portátil?|Path('dados') / 'lista.json'|Path('dados') + 'lista.json'|Path('dados').split('lista.json')|Path('dados').read_text('lista.json')
+Qual exceção capturar especificamente ao converter int('abc')?|ValueError|ZeroDivisionError|FileNotFoundError|IndexError
+Em try/except/else/finally, quando o else é executado?|Quando o try termina sem exceção|Sempre antes do try|Apenas quando except captura erro|Sempre, inclusive quando ocorre erro
+Qual comando sinaliza explicitamente uma entrada inválida?|raise ValueError('entrada inválida')|return ValueError sem lançar|except ValueError('entrada inválida')|print(ValueError) e continuar normalmente
+Como declarar uma exceção própria chamada SaldoInsuficiente?|class SaldoInsuficiente(Exception): pass|def SaldoInsuficiente(Exception): pass|class SaldoInsuficiente(str): pass|raise class SaldoInsuficiente
+Qual resultado de json.loads('{"x": 2}')?|Um dict com chave x e valor 2|Uma string contendo JSON|Uma lista com um elemento|Um objeto de arquivo aberto
+Qual configuração de csv.DictReader utiliza a primeira linha como nomes das colunas por padrão?|csv.DictReader(arquivo)|csv.reader(arquivo)|json.load(arquivo)|arquivo.readlines()
+Se Pessoa é uma classe, o que `p = Pessoa()` cria?|Uma instância da classe|Uma nova classe chamada p|Um módulo chamado Pessoa|Uma função sem retorno
+Se p.nome é 'Ana' e p.saudacao() retorna self.nome, qual resultado?|Ana|Pessoa|self|None
+Qual é o papel de __init__ em uma classe Python?|Inicializar atributos da instância recém-criada|Destruir a instância ao final do programa|Converter a classe em módulo|Impedir que a classe seja instanciada
+Qual primeiro parâmetro convencional de um método de instância?|self|cls|args|super
+Um método decorado com @classmethod recebe automaticamente o quê?|A classe como primeiro argumento|A instância como primeiro argumento obrigatório|Todos os atributos globais|Nenhum argumento implícito
+Qual decorador permite um método utilitário sem self nem cls implícito?|@staticmethod|@classmethod|@property|@abstractmethod
+Uma classe deve controlar alterações de saldo. Qual abordagem favorece encapsulamento?|Expor métodos de depósito e retirada com validação|Permitir qualquer alteração direta sem validar|Armazenar o saldo em variável global|Duplicar o saldo em cada método
+Qual decorador transforma um getter em acesso por atributo, como p.idade?|@property|@staticmethod|@classmethod|@dataclass
+Se class Gato(Animal) sobrescreve falar, qual método é usado em Gato().falar()?|O método de Gato|O de Animal sempre|Os dois automaticamente|Nenhum, pois herança impede sobrescrita
+Uma função recebe objetos com método area() e os chama sem verificar a classe concreta. Qual conceito?|Polimorfismo|Serialização|Recursão|Escopo global
+Um Pedido contém objetos Item e delega cálculos a eles. Qual relação é essa?|Composição|Herança múltipla obrigatória|Recursão|Sobrescrita de método
+Qual método especial define a representação amigável usada por str(obj)?|__str__|__len__|__iter__|__init__
+Qual benefício típico de @dataclass em uma classe com campos anotados?|Geração de __init__ e outros métodos a partir dos campos|Conversão automática em banco SQL|Execução assíncrona de métodos|Validação obrigatória de todos os tipos em runtime
+Qual exceção sinaliza o fim de um iterador ao chamar next() diretamente?|StopIteration|IndexError|ValueError|EOFError
+Uma função usa yield em vez de return para produzir vários valores. O que sua chamada cria?|Um gerador que produz valores sob demanda|Uma lista pronta sempre|Uma thread automática|Um arquivo temporário
+Qual comportamento de um decorador que recebe uma função e devolve outra?|Pode envolver a chamada e acrescentar comportamento|Sempre chama a função durante a definição|Remove todos os argumentos da função original|Só pode ser aplicado a classes
+Uma função interna usa uma variável da função externa mesmo após ela retornar. Qual conceito?|Closure|Herança|Importação circular|Casting
+Qual significado de `def f(x: int) -> str`?|Anota entrada int e retorno str, sem impor tipos automaticamente|Converte x automaticamente para int e saída para str|Proíbe toda chamada com outro tipo em runtime|Cria duas funções sobrecarregadas
+Qual vantagem de TypeVar em uma função identidade tipada?|Relacionar o tipo de entrada ao de saída para análise estática|Converter todos os tipos em texto|Eliminar a necessidade de argumentos|Executar a função em múltiplas threads
+Qual tipo representa um conjunto finito de constantes nomeadas, como estados de pedido?|Enum|dict sem chaves fixas|float|generator
+Qual padrão regex corresponde a exatamente três dígitos ASCII?|[0-9]{3}|[0-9]+|[0-9]{2,}|[A-Z]{3}
+Qual operação adiciona dois dias a um datetime chamado hoje?|hoje + timedelta(days=2)|hoje + 2|hoje.replace(day=2)|timedelta(hoje, 2)
+Qual nível de logging é mais adequado para registrar uma falha operacional recuperável?|WARNING|DEBUG sempre|NOTSET|Um print de senha
+Qual classe de collections conta ocorrências de itens?|Counter|deque|namedtuple|ChainMap
+Qual função de itertools combina elementos de dois iteráveis em produto cartesiano?|product|chain|islice|repeat
+Qual decorador de functools armazena resultados de chamadas com argumentos hashable?|lru_cache|wraps|partial|reduce
+Em unittest, qual afirmação verifica igualdade entre resultado e esperado?|self.assertEqual(resultado, esperado)|self.assertTrue(resultado, esperado) como teste de igualdade|self.assertRaises(resultado, esperado)|self.assertIsNone(resultado, esperado)
+Qual função pytest identifica automaticamente como teste por convenção?|test_soma|soma_testada sem configuração|main|verificar_soma
+Para testar código que consulta uma API sem internet, qual uso de mock é adequado?|Substituir a chamada HTTP por resposta controlada e verificar comportamento|Trocar a função sob teste por uma constante e ignorar o resultado|Usar dados reais de clientes|Desativar todas as asserções
+Em requests.get(url, timeout=5), o timeout serve para quê?|Limitar a espera por operações de conexão/leitura|Garantir que toda a resposta termine exatamente em 5 segundos|Repetir a requisição cinco vezes|Alterar o status HTTP para 200
+Uma API retorna 404. Qual sequência é mais robusta antes de usar os dados?|Verificar o status e tratar o erro antes de interpretar o JSON|Assumir que todo JSON contém os dados esperados|Ignorar o status se houver corpo|Repetir indefinidamente até receber 200
+Qual chamada abre conexão SQLite com arquivo dados.db?|sqlite3.connect('dados.db')|sqlite3.open('dados.db')|sqlite3.cursor('dados.db')|sqlite3.execute('dados.db')
+Qual forma parametriza um INSERT SQLite com nome variável?|cursor.execute('INSERT INTO pessoas(nome) VALUES (?)', (nome,))|cursor.execute(f"INSERT INTO pessoas VALUES ('{nome}')")|cursor.execute('INSERT INTO pessoas VALUES (?)', nome)|cursor.execute('INSERT INTO pessoas VALUES (nome)')
+Duas threads alteram o mesmo contador compartilhado. Qual recurso ajuda a evitar condição de corrida?|threading.Lock ao redor da atualização|Mais threads sem sincronização|time.sleep aleatório como garantia|Declarar a variável global como constante
+Qual opção permite paralelismo de CPU em Python com processos independentes?|multiprocessing.Process ou ProcessPoolExecutor|Criar apenas uma coroutine sem await|Uma lista de funções não chamadas|threading.Lock sem executar tarefas
+Dentro de async def, qual expressão espera uma coroutine sem bloquear diretamente o loop de eventos?|await tarefa()|time.sleep(10)|tarefa() sem await|while True: pass
+Uma CLI recebe caminhos de entrada e opções. Qual biblioteca padrão facilita argumentos e ajuda automática?|argparse|sqlite3|math|csv
+Uma automação move arquivos e precisa evitar sobrescrever nomes iguais. Qual teste é importante antes de mover?|Verificar se o destino já existe e tratar colisões|Verificar apenas a extensão do arquivo original|Excluir todos os destinos antes de começar|Assumir que nomes nunca se repetem
+Um consumidor de API deve lidar com rede indisponível. Qual estratégia permite falha controlada?|Timeout, tratamento de exceção e mensagem clara|Repetição infinita sem atraso|Ignorar exceções e usar resultado anterior como atual|Salvar tokens no código para facilitar depuração
+Em um CRUD, qual teste confirma que UPDATE persiste após reabrir o banco?|Atualizar, commit, fechar, reabrir e consultar o registro|Verificar apenas o texto do botão|Chamar UPDATE sem commit e ler a variável local|Recriar todas as tabelas antes da consulta
+No projeto final, uma função de cálculo também lê teclado e escreve banco. Qual refatoração melhora testabilidade?|Separar cálculo puro, entrada e persistência|Adicionar mais variáveis globais|Inserir tudo em um loop infinito|Copiar a função para cada tela

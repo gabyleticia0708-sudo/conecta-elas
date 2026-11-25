@@ -1,0 +1,9 @@
+Qual meta inicial é mais verificável para aprender backend?|Criar e testar CRUD Flask com SQL em quatro semanas ajustáveis|Virar especialista imediatamente|Aprender tudo sem prazo|Fazer apenas certificados
+O que torna repositório GitHub mais útil a recrutadoras?|README, código organizado, instruções e exemplos sem segredos|Muitos arquivos sem contexto|Tokens reais no código|Commits vazios
+Qual projeto de portfólio demonstra conhecimento de SQL?|Sistema com esquema, consultas, validação e explicação de decisões|Imagem de um banco sem implementação|Link vazio|Código copiado sem entendimento
+Qual conteúdo é relevante em currículo de estágio?|Formação, habilidades demonstráveis e projetos pertinentes|Senha de conta|Dados de outras pessoas|Experiência inventada
+Ao não saber resposta técnica em entrevista, qual atitude é melhor?|Explicar o raciocínio, limites e como investigaria|Inventar solução|Evitar toda pergunta|Afirmar experiência falsa
+Qual estrutura apresenta bem um projeto?|Problema, solução, decisões técnicas, testes e aprendizado|Somente lista de cores|Apenas nome do arquivo|Somente elogios
+Como descrever contribuição em projeto de equipe?|Indicar responsabilidade e resultado verificável sem exagerar|Atribuir toda autoria a si|Ocultar contribuição|Inventar métricas
+Qual informação deve constar em README para instalação?|Requisitos, comandos e variáveis de ambiente sem valores secretos|Credencial real de produção|Somente captura da tela|Dados pessoais de todas as usuárias
+Durante revisão de código, como responder a uma sugestão?|Discutir evidência, testar proposta e registrar decisão|Atacar colega|Aceitar sem entender sempre|Ignorar todas as sugestões

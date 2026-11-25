@@ -1,0 +1,18 @@
+Qual formato é JSON válido?|{"nome":"Ana","ativa":true}|{nome:'Ana'}|{"nome":"Ana",}|{'ativa':True}
+Qual expressão representa objeto JSON com dois campos?|{"id":1,"nome":"Ana"}|[1,"Ana"]|{"id",1}|(1,"Ana")
+Qual acesso recupera o segundo valor após interpretar [10,20,30] em JavaScript?|dados[1]|dados[2]|dados[0]|dados.20
+Qual valor não pertence ao padrão JSON?|undefined|null|false|42
+Como representar aspas dentro de uma string JSON?|Usar \"|Usar aspas simples externas|Remover as aspas|Usar \\ sem a aspa
+Como acessar cidade em {"endereco":{"cidade":"Natal"}} após parse em JS?|obj.endereco.cidade|obj.cidade|obj[1]|obj.endereco[1]
+Qual estrutura modela lista de alunas com id e nome?|[{"id":1,"nome":"Ana"},{"id":2,"nome":"Bia"}]|{"id":1,"id":2}|["id","nome"]|{"nome":Ana}
+Por que {nome:'Ana'} pode ser objeto JS, mas não JSON?|JSON exige aspas duplas nas chaves e strings|JSON aceita apenas números|JSON não permite objetos|JS não possui strings
+Qual resultado de JSON.parse('[1,2]')?|Array com dois números|String literal|Objeto com chave nome|Erro sempre
+Qual resultado de JSON.stringify({a:1})?|Texto '{"a":1}'|Objeto com a=1|Número 1|undefined
+Qual função lê JSON diretamente de arquivo aberto em Python?|json.load(arquivo)|json.loads(arquivo)|json.dump(arquivo)|json.parse(arquivo)
+Qual função grava objeto Python em arquivo aberto para escrita?|json.dump(obj,arquivo)|json.dumps(obj,arquivo)|json.load(obj)|json.write(obj)
+Qual abordagem permite tratar um JSON inválido ao ler arquivo?|Capturar JSONDecodeError e informar problema|Ignorar falha e afirmar sucesso|Executar conteúdo com eval|Forçar o arquivo a ser um inteiro
+Como preservar caracteres acentuados legíveis na gravação com json.dump?|ensure_ascii=False e arquivo UTF-8|encoding ASCII obrigatório|sort_keys=False apenas|indent=0 apenas
+Qual cabeçalho indica corpo JSON em uma requisição?|Content-Type: application/json|Accept: text/html apenas|Content-Length: json|Location: json
+Como validar payload de matrícula?|Verificar presença, tipo e regras dos campos no servidor|Assumir que JSON sintaticamente válido satisfaz regras|Conferir somente extensão do arquivo|Aceitar qualquer campo sem limite
+Qual diferença entre campo ausente e campo com null?|Ausência não inclui a chave; null inclui chave com valor nulo|São sempre idênticos|Null não é JSON válido|Ausência significa zero
+Qual modelagem facilita evolução de uma API?|Campos documentados, tipos consistentes e versionamento quando necessário|Mudar tipo de id em cada resposta|Usar chaves aleatórias por requisição|Duplicar chaves com valores diferentes

@@ -1,0 +1,38 @@
+Uma página abre em modo quirks por ausência de declaração. Qual linha deve iniciar o HTML moderno?|<!DOCTYPE html>|<html version="5">|<meta charset="UTF-8">|<?html version="5"?>
+Onde deve ficar o título exibido na aba do navegador, e não no conteúdo visual?|Em <title> dentro de <head>|Em <h1> dentro de <body>|Em <header> dentro de <body>|Em <footer> dentro de <body>
+Qual meta permite que o layout use a largura real da tela móvel?|<meta name="viewport" content="width=device-width, initial-scale=1">|<meta charset="viewport">|<meta name="width" content="1000">|<meta name="description" content="mobile">
+Uma notícia tem título principal e duas subseções. Qual hierarquia é apropriada?|Um h1 para o título e h2 para as subseções|Três h1 apenas para aumentar fonte|Usar p em todos os títulos|Usar h6 antes de h2 por ordem visual
+Qual sintaxe de comentário HTML não é exibida como conteúdo?|<!-- nota -->|// nota|/* nota */|# nota
+Como exibir literalmente os caracteres < e > de uma tag no texto HTML?|Usar &lt; e &gt;|Usar &amp; e &quot;|Colocar a tag sem escape dentro de p|Adicionar barra invertida antes de cada sinal
+Onde colocar o conteúdo principal único da página de cursos?|<main>|<header>|<footer>|<aside>
+Qual elemento identifica um conjunto importante de links de navegação?|<nav>|<article>|<figure>|<span>
+Um cartão de notícia pode ser compartilhado independentemente do restante da página. Qual elemento melhor o descreve?|<article>|<section> obrigatoriamente sem título|<aside> mesmo sendo notícia principal|<nav>
+Um texto lateral contém dicas relacionadas ao artigo, mas não essenciais à leitura. Qual elemento?|<aside>|<main>|<nav>|<address>
+Qual elemento associa semanticamente a legenda a uma imagem em figure?|<figcaption>|<label>|<caption>|<legend>
+Um botão que abre um painel foi implementado como div clicável. Qual substituição preserva interação nativa de teclado?|<button type="button">Abrir</button>|<div role="img">Abrir</div>|<span onclick="abrir()">Abrir</span>|<p tabindex="-1">Abrir</p>
+Qual atributo de um link define o destino?|href|src|action|target
+A página /cursos/aula.html precisa abrir /img/logo.png. Qual caminho relativo funciona?|../img/logo.png|img/logo.png|./img/logo.png|../../cursos/img/logo.png
+Qual elemento representa uma sequência cuja ordem é importante?|<ol>|<ul>|<dl>|<div>
+Uma imagem informa o resultado de um gráfico. Qual atributo deve fornecer alternativa textual relevante?|alt|title apenas|srcset|loading
+Qual estrutura permite escolher imagens de acordo com media queries?|<picture> com <source> e <img> de fallback|<img> com várias tags src|<figure> sem img|<video> com poster
+Qual atributo permite controles nativos em áudio?|controls|autoplay apenas|loop apenas|playback
+Qual elemento de vídeo fornece legendas em arquivo WebVTT?|<track kind="captions" src="legendas.vtt">|<caption src="legendas.vtt">|<source type="text/vtt">|<label for="video">
+Um iframe de mapa deve ter um nome acessível. Qual atributo adicionar?|title descritivo|alt na tag iframe|name vazio|srcdoc vazio
+Qual célula deve identificar o cabeçalho de uma coluna de tabela?|<th scope="col">|<td scope="col">|<caption scope="col">|<tr scope="col">
+Onde agrupar o total geral abaixo das linhas de uma tabela?|<tfoot>|<thead>|<tbody> obrigatório para cabeçalhos|<colgroup>
+Para enviar dados de cadastro a /cadastro usando POST, qual abertura?|<form action="/cadastro" method="post">|<form href="/cadastro" type="post">|<form src="/cadastro" method="get">|<form method="post" target="/cadastro">
+Qual tipo de input oferece validação nativa de formato básico de e-mail?|type="email"|type="text" com id email|type="url"|type="search"
+Como associar label a um input com id="email"?|<label for="email">E-mail</label>|<label id="email">E-mail</label> duplicando id|<label name="email">E-mail</label>|<label href="#email">E-mail</label>
+Qual valor é enviado ao selecionar <option value="rn">Rio Grande do Norte</option>?|rn|Rio Grande do Norte sempre|option|O texto completo da tag
+Qual elemento permite editar texto de várias linhas em um formulário?|<textarea name="descricao">|<input type="multiline">|<p contenteditable> sem envio próprio|<select multiple>
+Um botão dentro de form não deve enviá-lo. Qual atributo usar?|type="button"|type="submit"|method="none"|role="form"
+Um input numérico aceita valores de 1 a 10. Qual conjunto ativa restrições nativas?|type="number" min="1" max="10" required|type="text" size="10"|type="number" maxlength="10"|type="range" value="100"
+Qual estrutura agrupa opções de pagamento com um título acessível?|<fieldset> e <legend>|<div> e <title>|<section> e <label> sem associação|<nav> e <caption>
+Um botão alterna painel aberto/fechado. Qual atributo comunica esse estado?|aria-expanded|aria-hidden sempre true|aria-label com estado fixo|aria-current="page"
+Uma imagem decorativa junto a texto idêntico não acrescenta informação. Qual alt apropriado?|alt=""|alt="imagem"|O nome do arquivo|O texto repetido obrigatoriamente
+Um menu só abre em hover. Qual correção atende uso pelo teclado?|Usar botão focável com interação por teclado e estado indicado|Remover outline de todos os elementos|Definir tabindex=-1 no botão|Usar somente eventos mouseover
+Qual landmark HTML indica a área de navegação principal?|nav|span|strong|br
+Qual combinação melhora identificação da página por buscadores e pessoas?|title descritivo, h1 relevante e conteúdo semântico|Vários h1 invisíveis repletos de palavras-chave|Usar somente imagens sem alt|Repetir title idêntico em todas as páginas
+Qual propriedade Open Graph costuma indicar imagem da prévia de compartilhamento?|og:image|og:src|meta:image-url|seo:photo
+Dados estruturados de um evento devem representar o quê?|Nome, data e local verdadeiros, coerentes com a página|Palavras-chave inventadas e avaliações inexistentes|Somente cores e espaçamento|O código CSS da página
+Uma página de cursos tem menu, conteúdo principal, cards e rodapé. Qual estrutura é mais adequada?|header/nav, main com artigos ou seções, footer|Uma sequência de div clicáveis sem headings|Um único h1 contendo todos os textos e links|Tabela para todo o layout sem semântica

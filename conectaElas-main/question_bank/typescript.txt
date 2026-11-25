@@ -1,0 +1,3 @@
+Qual declaração impede atribuir texto à variável horas?|let horas: number = 10|let horas: any = 10|let horas = '10'|let horas: unknown = 10
+Qual interface exige id numérico e permite descrição opcional?|interface Curso {id:number; descricao?:string}|interface Curso {id?:number; descricao:string}|interface Curso {id:string}|interface Curso {id:any; descricao:string}
+Qual assinatura garante dois números e retorno numérico?|function soma(a:number,b:number):number {return a+b}|function soma(a:any,b:any){return a+b}|function soma(a:string,b:string):string{return a+b}|function soma(a:number,b:number):string{return ''}

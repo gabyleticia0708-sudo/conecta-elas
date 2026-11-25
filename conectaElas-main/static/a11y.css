@@ -1,0 +1,62 @@
+/* Acessibilidade global do ConectaElas — usa as variáveis do tema (claro, escuro e alto contraste). */
+:root{--on-accent:#fff}
+body.dark{--on-accent:#1c1130}
+body.contrast{--on-accent:#000}
+
+/* Aba lateral (direita, acima do meio) — não cobre o botão da LIA (canto inferior) nem o VLibras */
+.a11y-tab{position:fixed;right:0;top:26%;z-index:60;display:flex;align-items:center;gap:7px;min-height:48px;padding:10px 12px 10px 14px;border:0;border-radius:14px 0 0 14px;background:var(--accent);color:var(--on-accent);font-weight:800;font-size:.82rem;box-shadow:-4px 6px 22px rgba(60,25,110,.28);cursor:pointer}
+.a11y-tab .a11y-ico{font-size:1.25rem;line-height:1}
+.a11y-tab .a11y-lbl{max-width:0;overflow:hidden;white-space:nowrap;transition:max-width .2s}
+.a11y-tab:hover .a11y-lbl,.a11y-tab:focus-visible .a11y-lbl{max-width:140px}
+.a11y-tab:hover{filter:brightness(1.07)}
+body.contrast .a11y-tab{border:2px solid #fff;border-right:0}
+
+
+.a11y-panel{position:fixed;right:64px;top:12px;z-index:61;width:min(340px,calc(100vw - 80px));max-height:calc(100vh - 24px);overflow:auto;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:18px;padding:16px;box-shadow:0 20px 50px rgba(40,15,80,.28)}
+body.contrast .a11y-panel{border:2px solid #fff;box-shadow:none}
+.a11y-panel[hidden]{display:none!important}
+.a11y-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:4px}
+.a11y-head h2{font:800 1.05rem 'Plus Jakarta Sans',sans-serif;margin:0}
+.a11y-sub{margin:2px 0 12px;color:var(--muted);font-size:.78rem;line-height:1.5}
+.a11y-close{border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:10px;width:34px;height:34px;font-size:1rem;cursor:pointer}
+.a11y-group{display:grid;gap:8px;margin-bottom:12px}
+.a11y-group>.a11y-gt{font-size:.68rem;letter-spacing:1.1px;font-weight:800;color:var(--muted)}
+.a11y-size{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.a11y-btn{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;min-height:44px;padding:9px 12px;border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:12px;font-weight:700;font-size:.84rem;text-align:left;cursor:pointer}
+.a11y-btn:hover{background:var(--pale)}
+.a11y-size .a11y-btn{justify-content:center;text-align:center}
+.a11y-btn[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.a11y-state{font-size:.7rem;font-weight:800;letter-spacing:.4px;opacity:.9}
+.a11y-reset{margin-top:2px;background:var(--pale);color:var(--accent)}
+body.contrast .a11y-reset{color:#ffdf72}
+body.contrast .a11y-btn[aria-pressed="true"]{border:2px solid #fff}
+.a11y-note{font-size:.72rem;color:var(--muted);line-height:1.5;margin:6px 0 0}
+.sr-only{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* Espaçamento ampliado (inspirado em WCAG 1.4.12): letras, palavras e linhas */
+body.a11y-spacing,body.a11y-spacing :is(p,li,span,a,label,small,strong,em,h1,h2,h3,h4,button,input,textarea,select,td,th,div){letter-spacing:.08em;word-spacing:.14em}
+body.a11y-spacing :is(p,li,.lesson-body,.tutor-bubble-text,.panel,.card,.job,.post,.small,label){line-height:1.9}
+body.a11y-spacing :is(p,li){margin-bottom:.9em}
+body.a11y-spacing :is(pre,code,.editor,#code,#highlight,.lia-code){letter-spacing:0;word-spacing:0}
+body.a11y-spacing .a11y-panel :is(div,span,button){letter-spacing:.04em}
+
+/* Reduzir animações: complementa a regra já existente do site */
+body.reduce-motion .lia-typing i{animation:none!important;opacity:.7}
+
+/* VLibras: só aparece quando ativado */
+body:not(.a11y-vlibras) [vw]{display:none!important}
+
+/* Celular: aba no canto inferior esquerdo para não cobrir títulos nem o botão da LIA */
+@media(max-width:700px){.a11y-tab{top:auto;bottom:18px;right:auto;left:0;border-radius:0 14px 14px 0;box-shadow:4px 6px 22px rgba(60,25,110,.28)}body.contrast .a11y-tab{border:2px solid #fff;border-left:0}.a11y-panel{right:auto;left:64px;top:auto;bottom:12px;width:min(340px,calc(100vw - 76px))}}
+
+/* PASSO 13 — foco visível, áreas de toque e leitura simplificada */
+:where(a,button,input,select,textarea,summary,[tabindex]):focus-visible{outline:3px solid #a86be9!important;outline-offset:3px!important}
+:where(button,.btn,summary,.a11y-tab){min-height:44px}
+body.a11y-simple :is(.sidebar-note,.right,.decorative,.hero::before){display:none!important}
+body.a11y-simple .layout{grid-template-columns:minmax(0,1fr)!important}
+body.a11y-simple .content{max-width:900px;margin-inline:auto}
+body.a11y-simple :is(p,li,label){line-height:1.85!important}
+body.a11y-simple :is(.panel,.card){box-shadow:none!important;backdrop-filter:none!important}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+body.reduce-motion *,body.reduce-motion *::before,body.reduce-motion *::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+@media(max-width:700px){body.a11y-simple .main{min-width:0}}

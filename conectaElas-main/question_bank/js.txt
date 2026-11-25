@@ -1,0 +1,102 @@
+Qual recurso permite atualizar um cartão após o clique sem recarregar a página?|Manipular o DOM em um evento JavaScript|Alterar o DNS|Editar somente o HTML no servidor|Criar uma tabela SQL
+Qual saída de console.log(2 + 3, '2' + 3)?|5 e '23'|5 e 5|23 e 23|Erro de sintaxe
+Qual declaração permite reatribuição e tem escopo de bloco?|let|const|var|import
+Qual valor é primitivo e representa ausência intencional?|null|[]|{}|function(){}
+Qual resultado de typeof null?|object|string|null|undefined
+Qual resultado de Number('12') + 3?|15|'123'|NaN|12
+Qual resultado de 17 % 5?|2|3|5|12
+Qual comparação é falsa?|2 === '2'|2 == '2'|2 !== '2'|2 >= 2
+Qual resultado de true && false || true?|true|false|undefined|Erro
+Qual valor é truthy?|[]|0|''|null
+Se x=8, qual ramo de if(x>10) A; else B é executado?|B|A|Ambos|Nenhum
+Em switch, o que evita cair no próximo case?|break|continue|return false obrigatório|default
+Qual expressão devolve 'ok' se nota >= 7?|nota >= 7 ? 'ok' : 'rever'|nota ? 7 : 'ok'|nota >= 7 : 'ok' ? 'rever'|nota && 'rever'
+Quantas vezes executa for(let i=0;i<4;i++)?|4|3|5|0
+Quando while(false) executa o corpo?|Nunca|Uma vez|Duas vezes|Infinitamente
+Quando do { ação } while(false) executa?|Uma vez|Nunca|Duas vezes|Infinitamente
+Em for(const x of [10,20]), quais valores recebe x?|10,20|'0','1'|0,1|O array inteiro
+Em for(const k in {a:1,b:2}), quais valores recebe k?|a,b|1,2|0,1|Os objetos
+Qual instrução pula apenas a iteração atual?|continue|break|throw|return
+Qual declaração cria função nomeada soma?|function soma(a,b){return a+b}|let soma(a,b)=a+b|def soma(a,b): a+b|function = soma(a,b)
+Qual expressão atribui uma função a uma variável?|const f = function(x){return x*2}|function const f(x){}|const f = return x|const f(x) => x
+Qual arrow retorna implicitamente o dobro?|x => x*2|x => {x*2}|x -> x*2|=> x*2
+Qual retorno de function f(x){return x+1} chamada com 4?|5|4|undefined|NaN
+Em function f(x=3){return x}, qual resultado de f(0)?|0|3|undefined|null
+Qual sintaxe reúne argumentos restantes num array?|function f(...args){}|function f(args...){}|function f(*args){}|function f([args]){}
+Qual expressão copia os elementos de a em novo array?|[...a]|[a]|a|{a}
+Uma variável let dentro de if pode ser lida fora do bloco?|Não, salvo declaração em escopo externo|Sim sempre|Sim se for número|Sim se if for verdadeiro
+O que acontece ao acessar let x antes da declaração?|ReferenceError|undefined sempre|0|null
+Uma função interna que lê variável de uma função externa mantém acesso após retorno. Que conceito é esse?|Closure|Hoisting|Coerção|Serialização
+Qual argumento é callback em executar(() => console.log('ok'))?|A função passada|A string ok|O resultado de console.log já executado|O nome executar
+Qual valor de [3,6,9][1]?|6|3|9|undefined
+Qual método remove e retorna o último elemento?|pop|push|shift|unshift
+Qual método extrai parte do array sem modificá-lo?|slice|splice|sort|reverse
+Qual resultado de [1,2,3].map(x=>x*2)?|[2,4,6]|[1,2,3]|[2,3]|12
+Qual resultado de [1,2,3,4].filter(x=>x%2===0)?|[2,4]|[1,3]|[true,false]|4
+Qual resultado de [2,3,4].reduce((a,b)=>a+b,0)?|9|24|[9]|0
+Qual retorna o índice do primeiro elemento maior que 5?|findIndex(x=>x>5)|find(x=>x>5)|filter(x=>x>5)|map(x=>x>5)
+Qual método verifica se todos os elementos satisfazem uma condição?|every|some|find|reduce
+Como ordenar números do menor ao maior?|a.sort((x,y)=>x-y)|a.sort() sempre|a.sort((x,y)=>y-x)|a.reverse()
+Qual expressão acessa propriedade nome de pessoa?|pessoa.nome|pessoa->nome|pessoa::nome|pessoa(nome)
+Qual sintaxe define método em um objeto literal?|{dobro(x){return x*2}}|{def dobro(x):x*2}|{dobro = x*2}|{function dobro(x)}
+Qual declaração extrai nome do objeto p?|const {nome}=p|const [nome]=p|const nome={p}|const nome=p[]
+Se p=null, qual resultado de p?.nome?|undefined|ReferenceError|null obrigatório|false
+Qual resultado de 0 ?? 10?|0|10|null|undefined
+Qual função transforma texto JSON válido em objeto?|JSON.parse|JSON.stringify|String|Object.keys
+Qual representação o DOM oferece?|Árvore de nós do documento|Tabela SQL|Arquivo CSS compilado|Lista de servidores
+Qual seletor retorna o primeiro elemento com classe card?|document.querySelector('.card')|document.querySelector('card')|document.getElementById('.card')|document.querySelectorAll('.card')
+Qual método retorna todos os elementos .card?|querySelectorAll('.card')|querySelector('.card')|getElementById('card')|createElement('.card')
+Qual propriedade exibe entrada textual sem interpretá-la como HTML?|textContent|innerHTML|outerHTML|innerHTML +=
+Qual método alterna classe ativo?|el.classList.toggle('ativo')|el.classList.push('ativo')|el.style.toggle('ativo')|el.className.toggle('ativo')
+Qual atribuição altera a cor de texto diretamente?|el.style.color='red'|el.color='red'|el.style='color'|el.color('red')
+Qual cria um elemento li sem inseri-lo ainda?|document.createElement('li')|document.querySelector('li')|document.append('li')|new DOM('li')
+Qual remove um nó existente?|el.remove()|el.delete()|document.pop(el)|el.clear()
+Qual método define atributo aria-label?|el.setAttribute('aria-label','Fechar')|el.style.ariaLabel='Fechar'|el.attribute('aria-label')|el.set('Fechar')
+Qual propriedade lê texto digitado em input?|input.value|input.textContent|input.innerHTML|input.label
+Qual registra um callback de clique sem executá-lo imediatamente?|el.addEventListener('click', f)|el.addEventListener('click', f())|el.click=f()|el.on('click',f())
+Qual evento detecta entrada do ponteiro no elemento sem bubbling?|mouseenter|keydown|submit|change
+Qual propriedade de KeyboardEvent identifica a tecla?|event.key|event.value|event.mouse|event.target.value sempre
+Qual evento de formulário permite interceptar envio via botão ou Enter?|submit|mouseover|load|blur
+Qual propriedade aponta para o elemento que originou o evento?|event.target|event.type|event.timeStamp|event.key
+Qual chamada impede comportamento padrão cancelável?|event.preventDefault()|event.stopPropagation()|event.cancel()|event.remove()
+O que ocorre no bubbling?|Evento sobe de filho para ancestrais|Evento é apagado após o primeiro listener|DOM é recriado|Evento vira Promise
+Para itens adicionados dinamicamente, como delegar cliques?|Listener no contêiner verifica event.target.closest()|Listener em cada item antes de existir|Usar setInterval para clicar|Usar CSS :hover apenas
+Qual cancela um timeout usando seu identificador?|clearTimeout(id)|stopTimeout(id)|clearInterval() sem id|timeout.cancelAll()
+Uma Promise pode estar em qual conjunto de estados?|pending, fulfilled, rejected|running, stopped, paused|true, false, null|open, closed, locked
+Qual método executa ação tanto no sucesso como na rejeição?|finally|then apenas|catch apenas|resolve
+Qual palavra espera uma Promise em função async?|await|wait|yield sempre|pause
+Qual condição deve ser verificada após fetch para detectar HTTP 404?|!response.ok|response===null|fetch sempre rejeita 404|response.json()===false
+Qual código indica recurso não encontrado?|404|200|201|500
+Qual método assíncrono interpreta corpo JSON de Response?|response.json()|JSON.parse(response)|response.toJSON()|response.textContent
+Qual estrutura captura rejeição de await dentro do bloco?|try/catch|if/else isolado|switch|for
+O que ocorre quando uma Promise em Promise.all rejeita?|O resultado agregado rejeita|Apenas o item vira null|Todas as outras são canceladas automaticamente|Retorna array vazio
+Qual opção conecta AbortController a fetch?|{signal: controller.signal}|{abort: true}|{controller: true}|{timeout: controller}
+Como carregar módulo ES no navegador?|script type="module"|script type="css"|link rel="module" sozinho|script async obrigatório
+Qual sintaxe importa exportação nomeada soma?|import {soma} from './math.js'|include soma from math|import soma() from './math.js'|require {soma}
+Qual sintaxe instancia uma classe Pessoa?|new Pessoa()|class Pessoa()|Pessoa.new|new class Pessoa sem chamada
+Qual método de classe é chamado por new?|constructor|init obrigatório|main|create sempre
+Qual declaração representa herança?|class Aluna extends Pessoa|class Aluna inherits Pessoa|class Aluna : Pessoa|class Aluna implements Pessoa sempre
+Qual sintaxe define getter nome?|get nome(){return this._nome}|getter nome(){return this._nome}|get(nome)=this._nome|get nome = this._nome
+Qual nome representa campo privado em classe JS?|#saldo|_saldo|private saldo|this.saldo
+Qual estrutura remove duplicatas de valores primitivos?|Set|Map sempre|Object.keys|Array.fill
+Qual método de iterador devolve {value,done}?|next()|pop()|read()|get()
+Qual sintaxe declara generator?|function* f(){yield 1}|function f(){await 1}|generator f(){return 1}|function f*(){}
+Qual regex verifica exatamente três dígitos ASCII?|/^\d{3}$/|/\d/|/^\d+$/|/^[a-z]{3}$/
+Qual valor de new Date('2025-01-01T00:00:00Z').getUTCFullYear()?|2025|1|0|1970
+Qual API formata moeda conforme localidade?|Intl.NumberFormat|Date.parse|Math.round somente|JSON.stringify
+Qual efeito de 'use strict' em atribuição a variável não declarada?|ReferenceError|Cria global automaticamente|Ignora atribuição|Converte em const
+Qual ferramenta permite pausar execução e inspecionar variáveis?|Breakpoint no DevTools|Histórico do navegador|CSS validator apenas|Limpar cache
+Qual bloco executa mesmo quando try lança erro capturado?|finally|else|switch|case
+Qual maneira cria erro com mensagem explícita?|throw new Error('inválido')|return 'Error' sempre|console.log('erro')|new String('erro')
+Qual armazenamento persiste entre sessões do navegador para mesma origem?|localStorage|sessionStorage sempre|variável let|DOM
+Qual armazenamento é normalmente associado à sessão de uma aba?|sessionStorage|localStorage|cookie permanente|cache DNS
+Qual comando instala dependências declaradas no projeto npm?|npm install|node install|pip install|git install
+Qual campo de package.json define comandos executáveis com npm run?|scripts|commands|main apenas|dependencies apenas
+Qual ambiente permite executar JavaScript fora do navegador?|Node.js|HTML|CSS|SQLite
+Qual sintaxe exporta função em CommonJS?|module.exports = f|export module f|exports default f|import f
+Qual teste verifica comportamento em entrada limite?|Comparar retorno esperado para array vazio|Apenas verificar que arquivo existe|Executar só com entrada típica|Conferir cor do editor
+Uma tarefa foi removida, mas reaparece ao recarregar. O que verificar?|Atualização do armazenamento após remoção|Cor do botão|Nome do navegador|Somente tamanho da fonte
+Como impedir pontuação duplicada no quiz?|Registrar resposta por questão e bloquear nova submissão|Incrementar a cada clique|Contar opções disponíveis|Recarregar a página sempre
+Qual tratamento é importante em projeto de consumo de API?|Estados de carregamento, sucesso e erro|Assumir resposta sempre imediata|Ignorar status HTTP|Guardar credencial secreta no frontend
+Qual abordagem evita duplicar cartões ao atualizar dashboard?|Renderizar a partir de estado único e substituir lista anterior|Sempre append sem limpar|Criar IDs repetidos|Usar timer infinito
+Qual critério demonstra um projeto JavaScript robusto?|Testes de fluxo normal, vazio e falha com estado consistente|Apenas animações|Somente número de linhas|Nenhum tratamento de erro

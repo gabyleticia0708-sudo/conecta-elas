@@ -1,0 +1,28 @@
+Ao planejar um sistema de empréstimos, quais dados devem permanecer após abstrair detalhes irrelevantes?|Usuário, equipamento, prazo e estado do empréstimo|Cor da sala e nome da impressora|Todos os detalhes visuais, mesmo sem relação com a regra|Somente o nome do sistema
+Um programa de notas faz cadastro, cálculo e relatório em uma função de 300 linhas. Qual divisão reduz dependências?|Separar entrada, cálculo e apresentação em funções com contratos|Criar três cópias da função original|Separar cada linha em um arquivo sem definir entradas|Mover toda a lógica para uma variável global
+Três telas calculam o mesmo desconto de 10%. Qual padrão pode ser aproveitado?|Extrair uma função de desconto reutilizada pelas telas|Repetir a regra em cada tela e alterar uma por vez|Trocar todas as telas por uma lista de textos|Usar regras diferentes para o mesmo desconto
+Um cadastro de livros precisa verificar se um exemplar está emprestado. Qual modelo é suficiente para essa decisão?|Identificador do exemplar e situação de disponibilidade|Cores da capa, dimensões e preço de impressão|Nome do leitor sem identificar o exemplar|Lista de autores sem estado do empréstimo
+Para calcular o total de três produtos, qual sequência evita usar um valor ainda indefinido?|Ler preços, somar valores e mostrar total|Mostrar total, ler preços e depois somar|Somar antes de ler e substituir a saída|Ler e mostrar apenas o último preço
+Uma função recebe 80 e 20, calcula a média e exibe 50. O que é processamento?|Calcular (80 + 20) / 2|Receber os dois números|Exibir 50|Escolher o dispositivo de entrada
+Qual pseudocódigo calcula o dobro de um número informado?|LER n; resultado ← n * 2; MOSTRAR resultado|MOSTRAR resultado; LER n; resultado ← n * 2|LER n; resultado ← n + 2; MOSTRAR resultado|resultado ← 2; MOSTRAR n
+Em um fluxograma, o caminho deve se dividir conforme idade >= 18. Qual símbolo representa a condição?|Losango com saídas Sim e Não|Retângulo de processamento com uma saída|Elipse de início com duas entradas|Paralelogramo de saída sem condição
+Uma taxa fixa vale 0,05 e o saldo muda a cada compra. Como representar os dois valores?|Taxa constante e saldo variável|Ambos constantes|Taxa variável e saldo constante|Ambos como textos imutáveis
+Um campo de CEP precisa preservar o zero inicial de 01234. Qual tipo é adequado?|Texto|Inteiro|Booleano|Real de precisão fixa
+Qual é o resultado de 17 MOD 5?|2|3|5|12
+Qual condição é verdadeira quando nota = 7 e o mínimo é 7?|nota >= 7|nota > 7|nota < 7|nota != 7
+Uma atividade exige nota >= 7 E presença >= 75. Com nota 8 e presença 70, qual resultado?|Falso, pois uma condição falha|Verdadeiro, pois a nota basta|Verdadeiro, pois 70 é maior que 7|Falso somente se ambas falharem
+Se estoque = 0, um aviso deve ser exibido; caso contrário nada acontece. Qual estrutura atende?|SE estoque = 0 ENTÃO mostrar aviso|ENQUANTO estoque = 0 repetir aviso indefinidamente|SE estoque > 0 ENTÃO mostrar aviso|MOSTRAR aviso antes de avaliar estoque
+Um desconto só vale para compras acima de 100; abaixo ou igual não vale. Para 100, qual ramo executa?|O ramo SENÃO, sem desconto|O ramo SE, com desconto|Os dois ramos|Nenhum ramo se houver SENÃO
+Notas >= 9 são A; >= 7 são B; abaixo são C. Qual ordem evita classificar 9 como B?|Testar >= 9 antes de >= 7|Testar >= 7 antes de >= 9|Testar apenas >= 7|Testar apenas igualdade a 9
+Um contador começa em 1 e repete enquanto i <= 4, somando i. Qual soma final?|10|6|4|15
+O laço lê números até receber 0 e soma apenas os anteriores. Entrada 3, 5, 0. Qual total?|8|5|0|3
+Dois laços executam 3 e 4 iterações respectivamente, sendo o segundo interno. Quantas execuções do corpo interno?|12|7|4|3
+Em um laço de 1 a 5, o comando CONTINUE ocorre em i = 3 antes de imprimir. Qual saída?|1, 2, 4, 5|1, 2|1, 2, 3, 4, 5|3, 4, 5
+Lista [8, 4, 9], indexada a partir de zero. Qual valor está no índice 1?|4|8|9|1
+Matriz [[1, 2], [3, 4]], indexada a partir de zero. Qual valor está em M[1][0]?|3|2|4|1
+Uma função recebe preço e quantidade e calcula total. Como permitir reuso sem depender da tela?|Retornar preço * quantidade|Imprimir dentro da função sem retorno obrigatório|Ler sempre do teclado dentro da função|Usar somente variáveis globais
+Um campo aceita idade inteira entre 0 e 120. Qual entrada deve ser rejeitada?|121|0|120|42
+Uma busca funciona em listas com elementos. Qual teste revela um possível caso de borda?|Executar com lista vazia|Executar somente com a lista original|Trocar o nome da variável|Aumentar a fonte da interface
+Começando com x = 2, execute x ← x + 3; x ← x * 2; x ← x - 1. Qual valor final?|9|7|10|5
+Uma busca linear testa até n elementos. Se n dobra e o alvo está no fim, o número de testes tende a quê?|Dobrar|Quadruplicar|Permanecer constante|Diminuir pela metade
+Um algoritmo de empréstimo verifica saldo de estoque depois de registrar a retirada. Qual mudança evita saldo negativo?|Validar disponibilidade antes de registrar e atualizar como uma operação|Registrar e corrigir apenas ao gerar relatório|Ignorar o estoque quando o usuário existe|Registrar a retirada duas vezes para confirmar

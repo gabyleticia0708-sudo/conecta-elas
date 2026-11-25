@@ -1,0 +1,3 @@
+Qual validação de nome de curso é adequada no servidor?|Tipo texto, comprimento limitado e regras de negócio|Confiar apenas em required no HTML|Executar texto recebido|Aceitar tamanho ilimitado
+Qual forma protege consulta contra interpretação de entrada como SQL?|Consulta parametrizada com valores vinculados|Concatenar texto de formulário|Somente ocultar botão|Usar CSS para validar
+Como impedir usuária de editar anúncio de outra conta?|Verificar propriedade ou permissão no servidor em cada alteração|Esconder botão no frontend apenas|Aceitar owner_id enviado pelo cliente|Confiar em URL difícil de adivinhar

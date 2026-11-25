@@ -1,0 +1,3 @@
+Qual diferença entre imagem e container?|Imagem é modelo; container é instância executável isolada|São idênticos|Imagem é sempre banco|Container é arquivo Dockerfile
+Qual instrução Dockerfile define comando padrão ao iniciar container?|CMD|COPY|FROM|WORKDIR
+Qual mecanismo preserva dados quando container é removido?|Volume nomeado montado no diretório de dados|Somente camada gravável do container|Variável local do processo|EXPOSE

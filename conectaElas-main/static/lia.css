@@ -1,0 +1,60 @@
+/* LIA — usa só variáveis do tema (funciona em claro, escuro e alto contraste) */
+.lia-shell{display:grid;gap:14px;padding:20px}
+.lia-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.lia-id{display:flex;align-items:center;gap:12px}
+.lia-avatar{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#6824e7,#a064ff);color:#fff;font:800 1.25rem 'Plus Jakarta Sans',sans-serif;box-shadow:0 6px 16px rgba(104,36,231,.3)}
+body.contrast .lia-avatar{background:#000;border:2px solid #ffdf72;color:#ffdf72;box-shadow:none}
+.lia-settings{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.lia-field{display:grid;gap:2px;font-weight:700;font-size:.78rem;color:var(--muted)}
+.lia-field .field{margin:4px 0 0}
+.lia-log{display:flex;flex-direction:column;gap:12px;min-height:280px;max-height:55vh;overflow:auto;padding:14px;border:1px solid var(--border);border-radius:14px;background:var(--soft)}
+.lia-bubble{max-width:88%;padding:12px 14px;border-radius:14px;border:1px solid var(--border);background:var(--surface);color:var(--text);line-height:1.65;font-size:.9rem}
+.lia-user{align-self:flex-end;background:var(--pale);border-color:var(--accent)}
+.lia-bot{align-self:flex-start}
+.lia-who{display:block;font-size:.7rem;letter-spacing:.8px;color:var(--accent);margin-bottom:4px}
+.lia-p{margin:0 0 .7em;color:var(--text)!important;font-size:.9rem!important;line-height:1.65;white-space:pre-wrap;overflow-wrap:anywhere}
+.lia-p:last-child{margin-bottom:0}
+.lia-inline{background:var(--pale);color:var(--accent);padding:1px 6px;border-radius:6px;font:.85em/1.4 ui-monospace,Consolas,monospace}
+.lia-codewrap{margin:8px 0;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#1b1530}
+.lia-codebar{display:flex;align-items:center;justify-content:space-between;padding:5px 10px;background:#2b2147;color:#d9c9ff;font-size:.72rem;font-weight:700}
+.lia-copy{border:1px solid #6b5a99;background:transparent;color:#efe6ff;border-radius:8px;padding:3px 9px;font-size:.72rem;font-weight:700;cursor:pointer}
+.lia-copy:hover{background:#3a2d5c}
+.lia-code{margin:0;padding:12px;overflow:auto;color:#f3eeff;font:.82rem/1.6 ui-monospace,Consolas,monospace;white-space:pre}
+body.contrast .lia-codewrap,body.contrast .lia-codebar{background:#000;border-color:#fff;color:#fff}
+body.contrast .lia-code{color:#fff}
+.lia-chips{display:flex;gap:8px;flex-wrap:wrap}
+.lia-form{display:grid;gap:8px}
+.lia-form .field{margin:2px 0}
+.lia-code-details{border:1px dashed var(--border);border-radius:12px;padding:8px 12px}
+.lia-code-details summary{cursor:pointer;font-weight:700;font-size:.84rem;padding:4px 0}
+.lia-code-details .lia-field{margin:8px 0;max-width:260px}
+.lia-sendrow{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.lia-error{margin:0;color:#c0264b;font-weight:700;font-size:.84rem;min-height:1em}
+body.dark .lia-error{color:#ff9db6}
+body.contrast .lia-error{color:#ffdf72}
+.lia-dots{display:inline-flex;gap:5px;padding:4px 0}
+.lia-dots i{width:8px;height:8px;border-radius:50%;background:var(--accent);animation:liaBlink 1s infinite ease-in-out}
+.lia-dots i:nth-child(2){animation-delay:.18s}.lia-dots i:nth-child(3){animation-delay:.36s}
+@keyframes liaBlink{0%,80%,100%{opacity:.25;transform:scale(.8)}40%{opacity:1;transform:scale(1)}}
+
+/* Botão flutuante (canto inferior direito) */
+.lia-fab{position:fixed;right:18px;bottom:18px;z-index:55;display:flex;align-items:center;gap:8px;min-height:50px;padding:10px 18px;border:0;border-radius:30px;background:linear-gradient(135deg,#6824e7,#9a55ff);color:#fff;font-weight:800;font-size:.9rem;box-shadow:0 10px 28px rgba(104,36,231,.4);cursor:pointer}
+.lia-fab:hover{filter:brightness(1.08)}
+.lia-fab-ico{font-size:1.2rem}
+body.contrast .lia-fab{background:#ffdf72;color:#000;border:2px solid #fff;box-shadow:none}
+.lia-drawer{position:fixed;right:18px;bottom:82px;z-index:56;width:min(400px,calc(100vw - 28px));max-height:calc(100vh - 110px);display:flex;flex-direction:column;gap:10px;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:18px;padding:14px;box-shadow:0 22px 56px rgba(40,15,80,.32)}
+.lia-drawer[hidden]{display:none!important}
+body.contrast .lia-drawer{border:2px solid #fff;box-shadow:none}
+.lia-dhead{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.lia-dhead p{margin:2px 0 0}
+.lia-dclose{border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:10px;width:34px;height:34px;cursor:pointer}
+.lia-dlog{min-height:160px;max-height:34vh}
+.lia-dform{display:grid;gap:6px}
+.lia-dform .field{margin:2px 0}
+.lia-dsets{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.lia-dsend{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.lia-check{font-size:.82rem;font-weight:700}
+.lia-drawer .lia-bubble{max-width:96%}
+
+@media(max-width:900px){.lia-settings{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.lia-settings{grid-template-columns:1fr}.lia-fab-lbl{display:none}.lia-fab{padding:12px 15px}.lia-bubble{max-width:96%}}

@@ -1,0 +1,99 @@
+Uma equipe precisa compilar código .java em bytecode. Qual componente deve instalar?|JDK|Apenas JVM sem compilador|Apenas um JRE antigo|Somente o navegador
+Depois de `javac Main.java`, qual comando executa a classe Main?|java Main|java Main.java.class|javac Main|java Main.class
+Em `class Pessoa { private String nome; }`, onde fica nome?|Em um campo da classe, acessível conforme private|Em uma variável local de main|Em um pacote importado|Em um argumento obrigatório de toda função
+Qual assinatura é o ponto de entrada clássico de uma aplicação Java?|public static void main(String[] args)|public void main(int args)|static int main(String args)|private static void start()
+Qual comentário é reconhecido pelo Javadoc para documentar uma API?|/** descrição */|// descrição|# descrição|<!-- descrição -->
+Qual atribuição não compila sem conversão explícita?|int n = 2.5;|double n = 2;|boolean n = true;|char n = 'A';
+Qual método compara o conteúdo de duas Strings, independentemente da referência?|equals()|==|compareReference()|hashCode() sozinho
+Qual valor resulta de `(int) 7.9`?|7|8|7.9|9
+Com dois ints, qual resultado de `7 / 2`?|3|3.5|4|1
+Com x=5, qual expressão é verdadeira?|x >= 5 && x < 6|x > 5 && x < 6|x == 4|!(x >= 5)
+Um Scanner lê int com nextInt() e depois nextLine() retorna vazio. Por quê?|A quebra de linha anterior permaneceu pendente|nextLine não aceita espaços|O Scanner fecha automaticamente após nextInt|nextInt retorna String
+Com x=0, `if (x > 0) r=1; else r=2;` atribui qual valor?|2|1|0|Ambos
+Para classificar notas >=9 como A e >=7 como B, qual condição vem primeiro?|nota >= 9|nota >= 7|nota < 9|nota == 7
+No switch tradicional com case 1 sem break seguido de case 2, o que pode ocorrer?|Execução continua no próximo case|O compilador insere break automaticamente|O switch retorna null|A segunda instrução nunca executa
+Qual sintaxe de switch expression retorna valor sem fall-through?|case 1 -> "um";|case 1: break "um";|if 1 => "um";|case 1: continue "um";
+Quantas iterações em `for(int i=0; i<4; i++)`?|4|3|5|0
+Se n inicia em 0, quantas vezes `while(n>0){n--;}` executa?|0|1|Infinitas|2
+Se a condição inicial é falsa, quantas vezes um do-while executa seu corpo?|1|0|2|Depende de break obrigatório
+Num for, qual comando termina apenas a iteração atual?|continue|break|return|throw
+Um laço externo de 4 iterações e interno de 2 executa quantas vezes o corpo interno?|8|6|4|2
+Qual acesso válido ao último elemento de `int[] a={2,4,6}`?|a[a.length-1]|a[a.length]|a[3]|a.length()
+Em `int[][] m={{1,2},{3,4}}`, qual valor de m[1][0]?|3|2|4|1
+Qual estrutura percorre diretamente os valores de um array int[] nums?|for(int n : nums)|for(int n in nums)|for(nums -> n)|foreach(nums as n)
+Qual declaração de método retorna um int e recebe um int?|int dobro(int n) { return n*2; }|void dobro(int n) { return n*2; }|int dobro(n) { return n*2; }|int dobro(int n) { n*2; }
+Com `int f(int a,int b){return a-b;}`, qual retorno de f(8,3)?|5|11|-5|24
+Dois métodos mesmo nome, um recebe int e outro String. Qual conceito?|Sobrecarga|Sobrescrita|Herança de campos|Encapsulamento
+Como declarar método que aceita quantidade variável de argumentos int?|void f(int... valores)|void f(...int valores)|void f(int valores...)|void f(int[]... valores) para ints simples
+Uma variável declarada dentro de um bloco if pode ser usada fora dele?|Não, seu escopo termina no bloco|Sim, sempre vira campo da classe|Sim, se for int|Apenas se o if for verdadeiro
+Qual expressão instancia uma classe Cliente com construtor sem argumentos?|new Cliente()|class Cliente()|Cliente.new|new class Cliente
+Um campo private saldo e um método depositar estão em Conta. Qual acesso externo é recomendado?|conta.depositar(valor) com validação|conta.saldo = valor diretamente|Alterar o bytecode da classe|Usar uma variável global saldo
+Qual nome e retorno de um construtor da classe Conta?|Conta, sem tipo de retorno|Conta, retorno void obrigatório|newConta, retorno Conta|main, retorno int
+Em `Conta(int saldo){this.saldo=saldo;}`, o lado esquerdo representa quê?|Campo da instância atual|Parâmetro local apenas|Campo estático obrigatório|Uma nova instância
+Qual escolha evita alterações inválidas de saldo?|Campo privado e métodos públicos que validam|Campo público sem restrições|Saldo global compartilhado entre contas|Setter que aceita qualquer valor
+Um setter de idade precisa rejeitar negativos. Onde validar?|Dentro do setter antes de atribuir|Somente na página HTML|No getter depois de atribuir|Apenas no construtor, sem proteger o setter
+Qual modificador limita acesso de um campo à própria classe?|private|public|protected|Sem modificador
+Um contador deve pertencer à classe e ser compartilhado por instâncias. Qual modificador?|static|final sozinho|private sozinho|abstract
+Uma referência final para ArrayList impede o quê?|Reatribuir a referência a outra lista|Adicionar itens à lista|Ler os elementos|Chamar métodos da lista
+Qual declaração representa herança de Animal por Gato?|class Gato extends Animal|class Gato implements Animal (Animal classe)|class Gato inherits Animal|class Animal extends Gato
+Em um construtor de subclasse, como chamar explicitamente o construtor da superclasse?|super(argumentos)|this.super(argumentos)|new super(argumentos)|extends(argumentos)
+Uma subclasse redefine método com mesma assinatura. Qual anotação detecta erros de sobrescrita?|@Override|@Deprecated|@SuppressWarnings|@FunctionalInterface
+Com `Animal a=new Gato();` e falar sobrescrito, qual implementação roda?|A de Gato|A de Animal sempre|As duas automaticamente|Nenhuma, referência Animal impede chamada
+Qual característica de classe abstrata Java?|Não pode ser instanciada diretamente|Não pode ter métodos concretos|Não pode ter campos|Só pode ser final
+Uma classe deve implementar duas interfaces. Qual sintaxe?|implements A, B|extends A, B|implements A extends B|interface A, B
+Um Pedido contém List<Item>. Que alternativa favorece reuso sem relação é-um?|Composição|Herança de Item por Pedido|Sobrecarga de construtor obrigatória|Variável estática global
+Qual declaração define estados fechados de pedido?|enum Estado { NOVO, PAGO, ENVIADO }|class Estado { String qualquer; }|int Estado = 0;|interface Estado extends String
+Em Java moderno, qual record declara componentes nome e idade?|record Pessoa(String nome, int idade) {}|record Pessoa { String nome, int idade }|class record Pessoa(String nome, int idade)|record Pessoa extends String
+Qual operação adiciona item ao final de ArrayList<String> lista?|lista.add("Ana")|lista.push("Ana")|lista.append("Ana")|lista.insert("Ana")
+Para inserir/remover frequentemente no início de uma lista encadeada, qual operação LinkedList é adequada?|addFirst e removeFirst|Acesso aleatório por get(i) em todos os nós|sort após cada inserção|set(0, item) em lista vazia
+Qual coleção elimina valores duplicados por equals/hashCode?|HashSet|ArrayList|LinkedList|ArrayDeque
+Qual operação busca valor associado à chave id em Map?|map.get(id)|map.find(id)|map[id]|map.value(id)
+Qual operação de Deque retira o primeiro elemento e retorna null quando vazia?|pollFirst()|removeFirst() que lança exceção se vazia|peekFirst() que não retira|addFirst()
+Ao remover item durante iteração com Iterator, qual método é apropriado após next()?|iterator.remove()|lista.remove(item) diretamente em qualquer iteração|iterator.next().remove()|iterator.clear()
+Qual método de Comparable define ordem natural?|compareTo(T outro)|compare(T a,T b)|equals(T outro) apenas|sort(T outro)
+Para ordenar pessoas por idade sem alterar a classe, qual recurso?|Comparator.comparingInt(Pessoa::getIdade)|Implementar equals apenas|Converter tudo para String e comparar nomes|Ordenar por hashCode como regra de idade
+Qual vantagem de List<String> sobre List sem tipo?|Verificação de tipos em compilação e menos casts|Garante que nunca haja null|Ordena elementos automaticamente|Permite apenas um elemento
+Em `List<? extends Number>`, qual operação é segura sem conhecer subtipo?|Ler um elemento como Number|Adicionar Integer arbitrário|Adicionar Double arbitrário|Reatribuir elementos a qualquer Number
+Qual método de Collections ordena lista mutável com ordem natural?|Collections.sort(lista)|Collections.order(lista)|lista.sort() sem argumento em qualquer versão|Arrays.sort(lista) para List
+Qual exceção checked costuma exigir captura ou declaração throws?|IOException|NullPointerException|ArithmeticException|IndexOutOfBoundsException
+Qual catch é adequado ao ler arquivo que pode lançar IOException?|catch (IOException e)|catch (String e)|catch ()|catch (int e)
+Quando finally geralmente executa em try/catch?|Ao sair do try/catch, mesmo com return ou exceção|Somente se não houver erro|Somente quando catch falha|Antes do try
+Qual diferença entre throw e throws?|throw lança instância; throws declara exceções possíveis|throw declara lista; throws lança instância|Ambos apenas registram logs|throws captura a exceção
+Qual declaração cria exceção checked própria?|class RegraException extends Exception {}|class RegraException implements Exception {}|class RegraException extends String {}|throw class RegraException {}
+Qual forma cria Path portátil para arquivo dados.txt?|Path.of("dados.txt")|new Path("dados.txt")|Path.open("dados.txt")|File.path("dados.txt")
+Qual API lê todo texto de arquivo pequeno usando Path em Java moderno?|Files.readString(path)|Path.readAll(path)|File.readText(path)|Files.openText(path)
+Qual construção fecha automaticamente um recurso AutoCloseable?|try (var r = Files.newBufferedReader(path)) { ... }|try sem recursos e sem finally|catch (AutoCloseable r)|new Thread(r)
+Qual classe lê texto eficientemente linha por linha?|BufferedReader|BufferedWriter|ObjectOutputStream|Scanner de saída
+Qual risco ao desserializar objetos Java de origem não confiável?|Pode criar objetos e executar comportamentos inesperados; prefira formatos e validação seguros|Sempre converte objetos em texto sem risco|Garante validação de tipos e permissões|É equivalente a imprimir JSON
+Qual lambda recebe dois inteiros e soma?| (a,b) -> a+b| (a,b) => a+b| lambda a,b: a+b| (a,b) -> return a+b sem bloco
+Qual interface funcional recebe um valor e retorna boolean?|Predicate<T>|Consumer<T>|Supplier<T>|Runnable
+Qual referência equivale a `s -> s.length()` para String?|String::length|String.length()|String->length|length::String
+Em Stream, qual operação terminal materializa elementos em lista em Java 16+?|toList()|filter()|map()|peek()
+Qual pipeline soma quadrados dos números pares?|filter(n->n%2==0).map(n->n*n).reduce(0,Integer::sum)|map(n->n%2).reduce(0,Integer::sum)|filter(n->n%2!=0).map(n->n*n).reduce(0,Integer::sum)|map(n->n*n).count()
+Qual método Optional fornece valor padrão se vazio?|orElse(valor)|get() sem checar|isPresent(valor)|empty(valor)
+Qual classe representa data sem hora e fuso?|LocalDate|Instant|Duration|ZonedDateTime
+Qual abordagem favorece imutabilidade?|Campos finais, sem setters, cópias defensivas de coleções mutáveis|Atributos públicos modificáveis|Lista interna mutável retornada diretamente|Todos os métodos static com estado global
+Qual anotação sinaliza API desencorajada para novos usos?|@Deprecated|@Override|@Test|@FunctionalInterface
+Qual uso de reflection é adequado quando necessário?|Inspecionar metadados de tipos em runtime com cuidado e contratos claros|Ignorar autorização em toda chamada|Substituir qualquer acesso tipado por reflexão|Garantir melhor desempenho em todos os casos
+Qual declaração indica que classe pertence ao pacote app.modelo?|package app.modelo;|import app.modelo;|namespace app.modelo;|module app.modelo;
+Qual finalidade de JAR?|Empacotar classes e recursos Java em um arquivo|Compilar SQL em bytecode|Substituir o JDK completo|Executar somente código JavaScript
+Qual comando Maven executa testes do projeto?|mvn test|mvn start tests|java pom.xml|javac test pom.xml
+Onde declarar uma dependência Maven com groupId, artifactId e version?|Na seção dependencies do pom.xml|No método main|Em README.md apenas|Em um arquivo .class compilado
+Qual arquivo costuma definir build Gradle com Groovy DSL?|build.gradle|pom.xml|requirements.txt|package-lock.json
+Em JUnit 5, qual anotação marca método de teste?|@Test|@Override|@Run|@Main
+Qual teste verifica que dividir por zero lança exceção esperada?|assertThrows(ArithmeticException.class, () -> dividir(1,0))|assertEquals(0, dividir(1,0))|assertTrue(dividir(1,0)>0)|assertNotNull(dividir(1,0))
+Uma classe salva dados, desenha tela e envia e-mail. Qual princípio SOLID sugere separar essas responsabilidades?|Responsabilidade única|Substituição de Liskov como regra de nomes|Segregação de interfaces apenas|Inversão de dependência exige uma classe única
+Qual recurso de depuração permite interromper execução em uma linha e inspecionar variáveis?|Breakpoint|Comentário Javadoc|Importação estática|Coleta de lixo manual
+Qual prática de logging é apropriada em produção?|Registrar contexto e erros sem credenciais ou dados sensíveis|Registrar senhas para facilitar suporte|Ignorar todos os erros|Usar System.out com tokens completos
+Qual interface JDBC representa conexão ativa ao banco?|Connection|ResultSet|DriverManager como conexão|Statement como conexão
+Qual estrutura fecha Connection automaticamente ao concluir operação?|try-with-resources|while sem fechamento|catch sem finally nem close|new Connection em cada linha
+Qual benefício de PreparedStatement com parâmetros?|Separar comando SQL de valores e evitar concatenação insegura|Desativar restrições do banco|Executar qualquer tabela sem autorização|Garantir que nenhuma exceção ocorra
+Qual método JDBC executa UPDATE e retorna número de linhas afetadas?|executeUpdate()|executeQuery()|getResultSet()|next()
+Para garantir que duas alterações JDBC ocorram juntas, qual sequência?|setAutoCommit(false), executar ambas, commit ou rollback se falhar|commit antes das alterações e nunca rollback|setAutoCommit(true) e ignorar falhas|Fechar conexão antes de executar SQL
+Um cliente HTTP recebe status 404 com JSON. O que verificar antes de acessar campos de sucesso?|Código de status e estrutura do corpo|Somente tamanho da string|Apenas presença de chave Content-Type|Converter qualquer corpo em int
+Qual anotação costuma iniciar uma aplicação Spring Boot?|@SpringBootApplication|@Entity|@Test|@Override
+Qual anotação combina controller com serialização de retorno para HTTP?|@RestController|@Repository|@Service|@Configuration
+Qual finalidade de DTO em uma API?|Transferir campos necessários sem expor diretamente a entidade interna|Substituir todas as regras de negócio por dados públicos|Armazenar senha em texto para transporte|Forçar que cliente receba todos os campos do banco
+Um projeto OO possui classes Pedido e Item. Onde calcular subtotal de um item?|Em Item ou serviço de domínio coeso com sua regra|Em cada controller duplicando cálculo|No arquivo de configuração Maven|Somente no texto do README
+Um CRUD deve evitar alterar pedido de outra usuária. Onde verificar propriedade?|No servidor antes do UPDATE, usando identidade autenticada|Somente esconder botão no cliente|Somente no nome da tabela|Após o UPDATE já realizado
+Antes de entregar projeto Java, qual combinação verifica comportamento e integração?|Testes de regras, integração com banco de teste e validação de erros|Apenas compilar sem executar testes|Remover exceções e logs|Testar somente tela inicial com dados fixos

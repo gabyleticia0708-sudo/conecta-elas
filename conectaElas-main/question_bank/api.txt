@@ -1,0 +1,32 @@
+Em uma aplicação web, quem solicita os dados de cursos?|O cliente|O banco sozinho|O roteador DNS sempre|O arquivo CSS
+Qual par representa uma troca HTTP?|GET /cursos seguido de 200 com JSON|SELECT seguido de CSS|Commit seguido de HTML|DNS seguido de INSERT
+Qual parte de https://exemplo.org/cursos?page=2 é a query?|page=2|https|exemplo.org|/cursos
+Qual método é apropriado para alterar parcialmente um recurso existente?|PATCH|GET|HEAD|OPTIONS
+Qual cabeçalho expressa o formato de resposta desejado?|Accept|Content-Length|Host apenas|Location
+Onde normalmente ficam os dados JSON enviados em POST?|No corpo da requisição|No código de status|No domínio|No certificado TLS
+Qual cabeçalho identifica o corpo como JSON?|Content-Type: application/json|Accept-Language: json|Location: json|Cache-Control: json
+Qual status indica criação bem-sucedida?|201|301|404|500
+Qual status indica redirecionamento permanente?|301|200|403|503
+Qual status indica ausência de credenciais válidas?|401|200|201|500
+Qual status indica erro interno inesperado?|500|204|302|400
+Qual URI representa coleção de cursos em REST?|/cursos|/fazerTudo|/index.css apenas|/POST
+Qual endpoint consulta um curso de ID 7?|GET /cursos/7|DELETE /cursos/7|POST /cursos/7 sempre|GET /7/cursos apenas
+Em /cursos/7, como se chama o parâmetro 7 definido pela rota?|Path parameter|Header|Cookie|Body
+Em /cursos?nivel=basico, nivel é o quê?|Query parameter|Path parameter|Status code|Método
+Qual resposta ajuda um cliente a paginar?|Itens da página e indicador de próxima página|Todos os registros sempre|Apenas código 500|Somente nome da tabela
+Como solicitar cursos ativos ordenados por nome num contrato que usa esses parâmetros?|GET /cursos?ativo=true&sort=nome|POST /cursos?delete=true|GET /cursos/ativo=true&sort=nome sempre|DELETE /cursos
+Qual método é definido como idempotente para substituir recurso?|PUT|POST genericamente|CONNECT|Nenhum
+Qual alteração pode justificar nova versão de API?|Remover campo obrigatório usado por clientes existentes|Corrigir erro ortográfico interno sem alterar contrato|Adicionar log interno|Atualizar comentário
+Qual payload JSON válido para criar curso?|{"nome":"SQL","horas":10}|{nome:'SQL'}|{"nome":"SQL",}|<nome>SQL</nome>
+Qual resposta de erro ajuda o frontend sem expor detalhes internos?|Código estável e mensagem clara de validação|Stack trace com segredos|Sempre 200 sem mensagem|HTML aleatório
+Qual diferença entre autenticação e autorização?|Identificar a usuária e verificar permissão, respectivamente|São a mesma operação|Autorização verifica somente senha|Autenticação decide layout
+Onde guardar uma chave privada usada pelo backend?|Variável de ambiente do servidor|JavaScript público|README público|URL compartilhada
+Qual formato padrão envia bearer token?|Authorization: Bearer TOKEN|Accept: TOKEN|Content-Type: Bearer|Location: TOKEN
+Qual verificação é essencial ao receber JWT assinado?|Assinatura, expiração e claims esperadas|Somente decodificar Base64|Confiar em qualquer payload|Comparar tamanho do token
+Qual mecanismo controla acesso de scripts a recursos de outra origem no navegador?|CORS|SQL JOIN|DNS apenas|CSS Grid
+Qual status normalmente indica excesso de requisições?|429|201|304|404
+Qual artefato descreve endpoints, parâmetros e esquemas de resposta?|Documento OpenAPI|Arquivo de imagem|Banco sem documentação|CSS
+Qual teste verifica validação de endpoint de criação?|Enviar payload sem campo obrigatório e esperar 4xx adequado|Apenas abrir página inicial|Enviar só entradas válidas|Desabilitar validação
+Após fetch('/api/cursos'), o que verificar antes de ler dados?|response.ok e tratamento de falhas|Cor da tela|Se arquivo CSS existe|Apenas quantidade de caracteres da URL
+Ao usar cliente HTTP Python, qual medida evita espera indefinida?|Configurar timeout|Ignorar exceções|Remover validação de status|Repetir sem limite
+Qual requisito demonstra API de cursos bem construída?|Contratos testados, validação, autorização e erros coerentes|Somente endpoints GET para alterações|Resposta sempre 200|Chaves expostas no navegador

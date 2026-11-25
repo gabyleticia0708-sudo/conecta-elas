@@ -1,0 +1,58 @@
+Qual comando instala Flask no ambiente Python ativo?|python -m pip install Flask|python Flask install|npm install flask|git install flask
+Qual expressão cria instância Flask no módulo atual?|Flask(__name__)|Flask.run(__name__)|request.Flask()|render_template(__name__)
+Por que não usar servidor de desenvolvimento como servidor público de produção?|Não é projetado para segurança e robustez de produção|Não aceita HTML|Não suporta rotas|Só funciona com SQL
+Qual decorador associa /cursos à função abaixo?|@app.get('/cursos')|@app.template('/cursos')|@app.html('/cursos')|@request('/cursos')
+Qual método deve receber criação de cadastro?|POST|GET|HEAD|OPTIONS
+Qual rota converte id em inteiro?|/curso/<int:id>|/curso/{id:int}|/curso/:id|/curso/int(id)
+Qual objeto permite acessar parâmetros da requisição atual?|request|app.config apenas|session sempre|Flask
+Como redirecionar para endpoint cursos?|redirect(url_for('cursos'))|render_template('cursos')|request.redirect('cursos')|jsonify('cursos')
+Qual chamada renderiza arquivo cursos.html passando lista?|render_template('cursos.html', cursos=lista)|jsonify('cursos.html',lista)|redirect('cursos.html',lista)|app.run('cursos.html')
+Na configuração padrão, onde Flask procura templates?|templates/|static/|venv/|tests/
+Qual expressão Jinja imprime variável nome com autoescape em HTML?|{{ nome }}|{% nome %}|${nome}|<%= nome %>
+Como passar nome para template?|render_template('perfil.html',nome='Ana')|request.form('nome','Ana')|url_for('perfil.html',nome='Ana') sempre|session.run(nome='Ana')
+Qual bloco Jinja testa se lista contém itens?|{% if cursos %} ... {% endif %}|{{ if cursos }}|{% for cursos %}|<if cursos>
+Qual sintaxe percorre cursos no Jinja?|{% for curso in cursos %} ... {% endfor %}|{{ for curso in cursos }}|{% loop cursos %}|for(curso of cursos) em texto HTML
+Qual instrução herda layout de base.html?|{% extends 'base.html' %}|{% import 'base.html' as css %}|{{ base.html }}|<extends base.html>
+Qual recurso permite substituir trecho do layout em template filho?|Bloco nomeado com block/endblock|Cookie|Query parameter|HTTP status
+Qual chamada gera URL padrão de style.css em static?|url_for('static',filename='style.css')|url_for('style.css')|render_template('style.css')|request.form['style.css']
+Como incluir CSS em template de modo compatível com URL gerada?|link rel='stylesheet' com url_for('static',filename=...)|Colar CSS no endpoint de login|Usar script src de CSS|Criar tabela CSS
+Qual atributo do formulário envia dados no corpo?|method='post'|method='get'|action='POST' sozinho|type='post' no div
+Qual acesso tolera ausência do campo nome?|request.form.get('nome','')|request.form['nome'] sempre|request.args['nome'] para POST sempre|request.nome
+Por que validar entrada novamente no Flask?|Validação do navegador pode ser contornada|HTML garante toda regra de negócio|Banco aceita apenas emails automaticamente|CSS valida senha
+Qual função registra mensagem para exibição na próxima página?|flash|jsonify|print somente|url_for
+Onde ficam cookies enviados pelo navegador?|request.cookies|request.files|app.url_map|request.form sempre
+Na sessão padrão Flask, qual afirmação é verdadeira?|Dados ficam em cookie assinado, não necessariamente cifrado|Dados são sempre secretos por criptografia|Dados ficam em SQL automaticamente|Sessão não precisa chave
+Qual configuração deve ser secreta e estável para assinar sessão?|SECRET_KEY|PORT|FLASK_APP|STATIC_URL
+Qual medida é importante para uploads permitidos?|Limitar tamanho, validar conteúdo e gerar nome seguro|Confiar em nome fornecido|Executar arquivo recebido|Permitir qualquer tipo sem limite
+Qual módulo Python abre SQLite sem servidor externo?|sqlite3|json|flask_sqlite obrigatório|http
+Qual ação evita conexões abertas indefinidamente?|Fechar conexão após uso ou no teardown|Criar conexão por linha sem fechar|Guardar cursor no cookie|Usar variável global compartilhada sem cuidado
+Qual SQL cria tabela de aulas?|CREATE TABLE aula(id INTEGER PRIMARY KEY)|INSERT TABLE aula|SELECT TABLE aula|ALTER aula CREATE
+Qual consulta retorna aulas ordenadas pelo título?|SELECT * FROM aula ORDER BY titulo|SELECT * FROM aula GROUP BY titulo sempre|UPDATE aula ORDER BY titulo|DELETE FROM aula ORDER BY titulo
+Qual operação segura insere título vindo do formulário?|execute('INSERT INTO aula(titulo) VALUES(?)',(titulo,))|Concatenar título ao SQL|Executar título como SQL|Usar eval(titulo)
+Qual operação edita apenas aula selecionada?|UPDATE aula SET titulo=? WHERE id=?|UPDATE aula SET titulo=?|INSERT INTO aula(titulo) VALUES(?)|DROP TABLE aula
+Qual operação remove apenas registro escolhido?|DELETE FROM aula WHERE id=?|DELETE FROM aula|DROP TABLE aula|UPDATE aula SET id=NULL
+Qual conjunto corresponde a CRUD de aulas?|Criar, listar, editar e excluir com permissões|Só criar e listar|Só CSS e HTML|Somente autenticar
+Qual medida garante referência de matrícula ao curso em SQLite?|FK definida e PRAGMA foreign_keys=ON na conexão|Nome de curso em texto sem regra|Apenas validação visual|Índice sem FK
+Como preservar consistência ao registrar duas alterações dependentes?|Transação única e rollback em falha|Commit após cada passo sem controle|Ignorar exceções|Usar duas sessões independentes
+Qual regra evita cadastro duplicado por email?|Restrição UNIQUE e tratamento de erro|Confiar somente em pesquisa prévia sem constraint|Permitir duplicatas sempre|Guardar email em cookie
+Como armazenar senha corretamente?|Hash de senha com função apropriada e salt|Texto puro|Base64|MD5 simples
+Qual função Werkzeug verifica senha contra hash armazenado?|check_password_hash|generate_password_hash para comparar strings diretamente|hashlib.md5|request.password
+Qual ação encerra sessão atual?|session.clear()|app.stop()|DROP TABLE users|redirect sem limpar sessão
+Como proteger página de perfil?|Verificar autenticação e identidade no servidor|Ocultar link no menu apenas|Confiar em campo user_id do formulário|Usar CSS display:none
+Qual mensagem de falha de login reduz exposição de existência de conta?|Email ou senha inválidos|Email existe, senha incorreta|Conta inexistente para email informado|Mostrar hash da senha
+Qual proteção trata envio de formulário induzido por outra página?|Token CSRF associado à sessão e validado|Apenas esconder botão|Somente mudar cor do form|Usar GET para alterações
+Qual validação é apropriada para nota recebida em JSON?|Verificar tipo numérico e intervalo no servidor|Aceitar string arbitrária|Confiar no slider do frontend|Executar valor como expressão
+Como obter configuração secreta sem publicar valor no código?|os.environ ou os.getenv|Arquivo JavaScript público|Constante no GitHub|Parâmetro na URL pública
+Qual função Flask retorna resposta JSON?|jsonify|flash|render_template exclusivamente|redirect
+Qual método de rota lista recursos sem alterar estado?|GET|POST|DELETE|PATCH
+Ao criar recurso via API, qual resposta é apropriada?|JSON do recurso e status 201|Redirecionamento obrigatório para todo cliente|500 sempre|204 com corpo JSON obrigatório
+Qual método representa atualização parcial de um registro?|PATCH|GET|HEAD|OPTIONS
+Qual mecanismo agrupa rotas de um módulo?|Blueprint|Cookie|SQLite cursor|Jinja filter
+Qual vantagem de create_app() em Flask?|Criar instâncias com configurações distintas para testes|Executar SQL automaticamente|Dispensar importações|Evitar todos os erros
+Onde colocar regra de cálculo de progresso reutilizável?|Função de serviço testável separada da rota|Dentro de CSS|Em template duplicado em várias páginas|No cookie do usuário
+Qual recurso customiza resposta para 404?|@app.errorhandler(404)|@app.get(404)|@request.status(404)|@app.template(404)
+O que deve ser evitado em logs?|Senhas, tokens e dados sensíveis|Código de status|Identificador de requisição não sensível|Tipo genérico do erro
+Qual teste verifica que visitante não autenticado não altera perfil?|POST sem sessão e verificar rejeição e banco intacto|Somente abrir HTML|Testar com admin sempre|Ignorar resposta
+Qual recurso Flask simula requisições sem servidor externo?|app.test_client()|app.run() em navegador obrigatório|request.test()|render_template.test()
+Qual configuração de produção é essencial?|Desativar debug e definir segredo seguro|Ativar debugger público|Fixar senha de admin no código|Expor banco diretamente
+Qual cenário demonstra projeto Flask consistente?|Cadastro, login, autorização, CRUD, validação e testes de falha|Apenas tela inicial|Somente animações|Rotas que retornam sucesso sem salvar

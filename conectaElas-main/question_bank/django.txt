@@ -1,0 +1,3 @@
+Qual comando executa servidor Django de desenvolvimento a partir do projeto?|python manage.py runserver|python manage.py migrate apenas|django run app.py|npm run django
+Qual campo representa relação muitos-para-um com Curso?|models.ForeignKey(Curso,on_delete=models.CASCADE)|models.CharField(Curso)|models.ManyToManyField(Curso) sempre|models.IntegerField sem relação
+Qual expressão de template Django itera uma lista?|{% for curso in cursos %} ... {% endfor %}|{{ for curso in cursos }}|<for cursos>|{% loop cursos %}

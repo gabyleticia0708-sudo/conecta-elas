@@ -1,0 +1,10 @@
+Qual elemento HTML permite ativação por teclado nativamente para uma ação?|button|div com onclick apenas|span com classe botão|img sem texto
+Qual contraste mínimo WCAG AA é usual para texto de tamanho normal?|4,5:1|1:1|2:1|3:1
+Qual mudança evita perder foco durante navegação por Tab?|Manter indicador de foco visível e ordem lógica|Remover outline sem alternativa|Definir tabindex positivo aleatório|Usar apenas hover
+Para botão apenas com ícone de fechar, qual medida fornece nome acessível?|aria-label="Fechar"|aria-hidden="true"|role="presentation"|title vazio
+Como associar rótulo ao campo de email?|label for igual ao id do input|Somente placeholder|Texto distante sem associação|Cor diferente sem texto
+Qual combinação oferece auditoria mais completa?|Ferramenta automática, teclado e teste com leitor de tela|Somente capturas de tela|Somente validação SQL|Somente contraste do logo
+Em diálogo modal, qual comportamento ajuda usuária de teclado?|Foco inicial apropriado, navegação contida e retorno do foco ao fechar|Foco perdido no body|Bloquear Tab sem alternativa|Permitir foco apenas no fundo
+Como indicar erro em campo obrigatório?|Mensagem textual associada ao campo, além de sinal visual|Borda vermelha apenas|Ícone sem nome|Apagar valor sem avisar
+Qual alt é apropriado para imagem puramente decorativa?|alt=""|alt="imagem"|Nome de arquivo|Omitir alt sempre
+Qual teste ajuda a identificar falha de reflow?|Ampliar e testar largura reduzida sem perda de conteúdo essencial|Apenas tela de 1920px|Desabilitar zoom|Fixar largura de 1500px

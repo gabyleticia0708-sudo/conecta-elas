@@ -1,0 +1,3 @@
+Qual comando verifica a versão do runtime Node?|node --version|npm start --version apenas|python --version|git --version
+Qual importação CommonJS carrega módulo local utils.js?|require('./utils.js')|require('utils.js') sempre local|import('./utils.css')|include utils
+Qual status e cabeçalho são adequados para resposta JSON bem-sucedida no HTTP Node?|200 e Content-Type application/json|404 e text/css|500 e text/html|301 sem corpo

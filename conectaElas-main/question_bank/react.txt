@@ -1,0 +1,10 @@
+Qual sintaxe JSX exibe variável nome dentro de h1?|<h1>{nome}</h1>|<h1>nome</h1>|<h1>${nome}</h1>|<h1>{{nome}}</h1>
+Como componente filho deve tratar props recebidas?|Como dados somente leitura|Modificar diretamente objeto de props|Alterar por variável global|Executar setProps nativo obrigatório
+Como incrementar estado count usando valor anterior?|setCount(c=>c+1)|count++ apenas|this.count=1 em função|setCount(count++)
+Qual key é preferível para lista que pode ser reordenada?|ID estável do item|Math.random() a cada render|Índice sempre|Mesmo texto para todos
+Qual cuidado é necessário com efeito que adiciona listener?|Retornar função de limpeza que remove listener|Adicionar listener em todo render sem limpeza|Alterar DOM em loop infinito|Ignorar dependências
+Qual estrutura evita duplicar estado calculável num painel?|Calcular totais a partir da lista fonte|Manter contadores independentes sem sincronizar|Salvar totais em várias variáveis globais|Recarregar página a cada cálculo
+Qual componente recebe título e duração reutilizáveis?|function Card({titulo,duracao}){return <div>{titulo} {duracao}</div>}|function Card(){return tituloExternoSempre}|<Card titulo> sem definição|function Card(props){props.titulo='fixo'}
+Qual retorno de useState(0) fornece valor e função de atualização?|Array [estado,setEstado]|Objeto DOM|Somente número|Promise
+Qual ação reduz atualização de estado por resposta antiga de rede?|Cancelar ou ignorar resposta obsoleta na limpeza do efeito|Adicionar requisições a cada render|Ignorar ordem de respostas|Atualizar estado após desmontagem sempre
+Como controlar input em React?|value ligado ao estado e onChange atualizando estado|value fixo sem onChange|Manipular diretamente DOM em todo render|Usar key aleatória a cada tecla
