@@ -1,3 +1,0 @@
-Como componente Vue recebe título configurável?|Declarar prop titulo e renderizá-la|Usar variável global compartilhada obrigatória|Alterar DOM externo diretamente|Duplicar componente por título
-Em Composition API, como atualizar ref count no script?|count.value++|count++ sempre|count.set(1)|this.count.value obrigatório
-Qual diretiva renderiza lista com chave estável?|v-for="item in itens" :key="item.id"|v-if="item in itens"|v-list="itens"|v-for sem key e índice aleatório
