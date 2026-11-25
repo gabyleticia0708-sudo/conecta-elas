@@ -237,7 +237,7 @@ def user():
  with db() as c:r=c.execute('SELECT id,name,email,account_type,company_name,bio,goal,level,interests,occupation,languages,avatar_url,email_verified FROM users WHERE id=?',(session['uid'],)).fetchone()
  return dict(r) if r else None
 
-PAGES={'/business/candidaturas':'candidates','/business/entrevistas':'interviews','/business/relatorios':'reports','/':'dashboard','/dashboard':'dashboard','/cursos':'courses','/desafios':'challenges','/perfil':'profile','/certificados':'certificates','/oportunidades':'jobs','/portfolio':'profile','/comunidade':'community','/laboratorio':'lab','/tutora':'tutor','/lia':'tutor','/entrar':'auth','/projetos':'projects','/trilha-personalizada':'planner','/administracao':'admin'}
+PAGES={'/mensagens':'professionalchat','/business/candidaturas':'candidates','/business/entrevistas':'interviews','/business/relatorios':'reports','/':'dashboard','/dashboard':'dashboard','/cursos':'courses','/desafios':'challenges','/perfil':'profile','/certificados':'certificates','/oportunidades':'jobs','/portfolio':'profile','/comunidade':'community','/laboratorio':'lab','/tutora':'tutor','/lia':'tutor','/entrar':'auth','/projetos':'projects','/trilha-personalizada':'planner','/administracao':'admin'}
 for path,pg in PAGES.items():
  def view(pg=pg):
   if pg=='admin':
@@ -275,10 +275,11 @@ def register():
    r=c.execute('INSERT INTO users(name,email,password,account_type,company_name,goal,level,interests,occupation,languages) VALUES(?,?,?,?,?,?,?,?,?,?)',(name,email,generate_password_hash(pw),account_type,company if account_type in ('employer','company') else '',profile['goal'],profile['level'],profile['interests'],profile['occupation'],profile['languages']));uid=r.lastrowid
  except sqlite3.IntegrityError:return error('E-mail já cadastrado.')
  begin_session(uid)
+ verification_sent=False
  if mail_ready():
-  try: issue_verification(uid,email)
+  try: issue_verification(uid,email);verification_sent=True
   except Exception:app.logger.warning('Falha no envio de confirmação de e-mail')
- return jsonify(ok=True,redirect='/oportunidades' if account_type=='employer' else '/dashboard')
+ return jsonify(ok=True,verification_sent=verification_sent,redirect='/perfil#configuracoes')
 @app.post('/auth/login')
 def login():
  x=data()
@@ -1720,5 +1721,7 @@ def lia_chat():
 
 from business import install_business, business_fallback
 install_business(app,db,user,error,data)
+from professional_chat import install_chat
+install_chat(app,db,auth_required)
 
 if __name__=='__main__':app.run(debug=os.getenv('FLASK_DEBUG')=='1',host='0.0.0.0',port=int(os.getenv('PORT',5000)))

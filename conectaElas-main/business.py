@@ -42,7 +42,7 @@ def install_business(app,db,user,error,data):
     name=str(x.get('company_name','')).strip()[:120]
     if len(name)<2:return error('Informe o nome empresarial.')
     if vals[3] and not vals[3].startswith('https://'):return error('Use um site HTTPS.')
-    c.execute('INSERT INTO business_profiles(user_id,'+','.join(fields)+') VALUES('+','.join('?' for _ in range(len(fields)+1))+') ON CONFLICT(user_id) DO UPDATE SET '+','.join(k+'=excluded.'+k for k in fields),(uid,*vals))
+    c.execute('INSERT INTO business_profiles(user_id,'+','.join('"'+k+'"' for k in fields)+') VALUES('+','.join('?' for _ in range(len(fields)+1))+') ON CONFLICT(user_id) DO UPDATE SET '+','.join('"'+k+'"=excluded."'+k+'"' for k in fields),(uid,*vals))
     c.execute('UPDATE users SET company_name=? WHERE id=?',(name,uid))
    row=c.execute('SELECT * FROM business_profiles WHERE user_id=?',(uid,)).fetchone()
   return jsonify(dict(row) if row else {k:'' for k in fields})

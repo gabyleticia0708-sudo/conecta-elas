@@ -300,3 +300,11 @@ def health():
         return jsonify({"ok": False, "error": str(exc)}), 500
 
 
+
+@bp.post('/api/editor/python/run')
+def python_run():
+    from lab_python import run
+    try:
+        return jsonify(success=True, output=run(str(request.get_json().get('code',''))))
+    except (ValueError, SyntaxError, ArithmeticError, TypeError, RecursionError) as exc:
+        return jsonify(success=False,error=str(exc)),400

@@ -52,9 +52,9 @@ body:not(.a11y-vlibras) [vw]{display:none!important}
 /* PASSO 13 — foco visível, áreas de toque e leitura simplificada */
 :where(a,button,input,select,textarea,summary,[tabindex]):focus-visible{outline:3px solid #a86be9!important;outline-offset:3px!important}
 :where(button,.btn,summary,.a11y-tab){min-height:44px}
-body.a11y-simple :is(.sidebar-note,.right,.decorative,.hero::before){display:none!important}
-body.a11y-simple .layout{grid-template-columns:minmax(0,1fr)!important}
-body.a11y-simple .content{max-width:900px;margin-inline:auto}
+body.a11y-simple :is(.sidebar-note,.decorative,.hero::before){display:none!important}
+
+body.a11y-simple .content{min-width:0}
 body.a11y-simple :is(p,li,label){line-height:1.85!important}
 body.a11y-simple :is(.panel,.card){box-shadow:none!important;backdrop-filter:none!important}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
